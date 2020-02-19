@@ -1,68 +1,42 @@
 import collections
 import os
 import random
-import threading
-import collections
 import shutil
 import sys
 import tempfile
+import threading
 import time
 import traceback
 import unittest
-from . import HydrusConstants as HC
-from . import ClientConstants as CC
-from . import HydrusGlobals as HG
-from . import ClientAPI
-from . import ClientDefaults
-from . import ClientFiles
-from . import ClientManagers
-from . import ClientNetworking
-from . import ClientNetworkingBandwidth
-from . import ClientNetworkingDomain
-from . import ClientNetworkingLogin
-from . import ClientNetworkingSessions
-from . import ClientServices
-from . import ClientTags
-from . import ClientThreading
-from . import HydrusDB
-from . import HydrusExceptions
-from . import HydrusPubSub
-from . import HydrusSessions
-from . import HydrusTags
-from . import HydrusThreading
-from . import TestClientAPI
-from . import TestClientConstants
-from . import TestClientDaemons
-from . import TestClientData
-from . import TestClientDB
-from . import TestClientDBDuplicates
-from . import TestClientImageHandling
-from . import TestClientImportOptions
-from . import TestClientImportSubscriptions
-from . import TestClientListBoxes
-from . import TestClientMigration
-from . import TestClientNetworking
-from . import TestClientTags
-from . import TestClientThreading
-from . import TestDialogs
-from . import TestFunctions
-from . import TestHydrusNATPunch
-from . import TestHydrusNetworking
-from . import TestHydrusSerialisable
-from . import TestHydrusServer
-from . import TestHydrusSessions
-from . import TestServerDB
-from twisted.internet import reactor
-from . import ClientCaches
-from . import ClientData
-from . import ClientOptions
-from . import HydrusData
-from . import HydrusPaths
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
-from . import QtPorting as QP
 
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from twisted.internet import reactor
+
+from . import ClientAPI, ClientCaches
+from . import ClientConstants as CC
+from . import (ClientData, ClientDefaults, ClientFiles, ClientManagers,
+               ClientNetworking, ClientNetworkingBandwidth,
+               ClientNetworkingDomain, ClientNetworkingLogin,
+               ClientNetworkingSessions, ClientOptions, ClientServices,
+               ClientTags, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusDB, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import (HydrusPaths, HydrusPubSub, HydrusSessions,
+               HydrusTags, HydrusThreading)
+from . import QtPorting as QP
+from . import (TestClientAPI, TestClientConstants, TestClientDaemons,
+               TestClientData, TestClientDB, TestClientDBDuplicates,
+               TestClientImageHandling, TestClientImportOptions,
+               TestClientImportSubscriptions, TestClientListBoxes,
+               TestClientMigration, TestClientNetworking,
+               TestClientTags, TestClientThreading, TestDialogs,
+               TestFunctions, TestHydrusNATPunch, TestHydrusNetworking,
+               TestHydrusSerialisable, TestHydrusServer,
+               TestHydrusSessions, TestServerDB)
 
 DB_DIR = None
 
@@ -793,7 +767,3 @@ class Controller( object ):
             else:
                 
                 return ( CC.STATUS_SUCCESSFUL_AND_NEW, 'test note' )
-                
-            
-        
-    

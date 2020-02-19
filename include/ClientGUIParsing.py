@@ -1,45 +1,31 @@
-import bs4
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientDefaults
-from . import ClientGUICommon
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIMenus
-from . import ClientGUIControls
-from . import ClientGUIFunctions
-from . import ClientGUIListBoxes
-from . import ClientGUIListCtrl
-from . import ClientGUIScrolledPanels
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUISerialisable
-from . import ClientGUITopLevelWindows
-from . import ClientNetworkingContexts
-from . import ClientNetworkingDomain
-from . import ClientNetworkingJobs
-from . import ClientParsing
-from . import ClientPaths
-from . import ClientSerialisable
-from . import ClientThreading
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusSerialisable
-from . import HydrusTags
-from . import HydrusText
 import itertools
 import json
 import os
 import sys
 import threading
-import traceback
 import time
-from . import QtPorting as QP
+import traceback
+
+import bs4
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientData, ClientDefaults, ClientGUICommon, ClientGUIControls,
+               ClientGUIDialogs, ClientGUIDialogsQuick, ClientGUIFunctions,
+               ClientGUIListBoxes, ClientGUIListCtrl, ClientGUIMenus,
+               ClientGUIScrolledPanels, ClientGUIScrolledPanelsEdit,
+               ClientGUISerialisable, ClientGUITopLevelWindows,
+               ClientNetworkingContexts, ClientNetworkingDomain,
+               ClientNetworkingJobs, ClientParsing, ClientPaths,
+               ClientSerialisable, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable, HydrusTags, HydrusText
 from . import QtPorting as QP
+
 
 class DownloaderExportPanel( ClientGUIScrolledPanels.ReviewPanel ):
     
@@ -4797,7 +4783,3 @@ class TestPanelPageParserSubsidiary( TestPanelPageParser ):
             message = 'Exception:' + os.linesep + str( etype.__name__ ) + ': ' + str( e ) + os.linesep + trace
             
             self._results.setPlainText( message )
-            
-        
-    
-    

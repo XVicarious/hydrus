@@ -1,10 +1,23 @@
-from . import HydrusConstants as HC
-from . import HydrusExceptions
-from . import HydrusThreading
 import hashlib
 import io
+import os
+import shutil
+import struct
+import threading
+import time
+import traceback
+import warnings
+
 import numpy
-import numpy.core.multiarray # important this comes before cv!
+import numpy.core.multiarray  # important this comes before cv!
+from PIL import Image as PILImage
+from PIL import ImageFile as PILImageFile
+from PIL import _imaging
+
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusPaths, HydrusThreading
 
 try:
     
@@ -17,19 +30,6 @@ except:
     pass # old version of numpy, screw it
     
 
-import os
-from PIL import _imaging
-from PIL import ImageFile as PILImageFile
-from PIL import Image as PILImage
-import shutil
-import struct
-import threading
-import time
-import traceback
-from . import HydrusData
-from . import HydrusGlobals as HG
-from . import HydrusPaths
-import warnings
 
 def EnableLoadTruncatedImages():
     
@@ -714,4 +714,3 @@ def ResizeNumPyImage( numpy_image, target_resolution ):
         
     
     return cv2.resize( numpy_image, ( target_width, target_height ), interpolation = interpolation )
-    

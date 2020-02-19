@@ -1,35 +1,25 @@
-from . import HydrusConstants as HC
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientGUICanvas
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIFunctions
-from . import ClientGUIManagement
-from . import ClientGUIMedia
-from . import ClientGUIMenus
-from . import ClientGUIResults
-from . import ClientDownloading
-from . import ClientSearch
-from . import ClientGUIShortcuts
-from . import ClientThreading
 import collections
 import hashlib
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusSerialisable
-from . import HydrusText
-from . import HydrusThreading
 import inspect
 import os
 import sys
 import time
 import traceback
-from . import QtPorting as QP
-from . import HydrusGlobals as HG
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientData, ClientDownloading, ClientGUICanvas,
+               ClientGUIDialogs, ClientGUIDialogsQuick,
+               ClientGUIFunctions, ClientGUIManagement, ClientGUIMedia,
+               ClientGUIMenus, ClientGUIResults, ClientGUIShortcuts,
+               ClientSearch, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable, HydrusText, HydrusThreading
 from . import QtPorting as QP
 
 RESERVED_SESSION_NAMES = { '', 'just a blank page', 'last session', 'exit session' }

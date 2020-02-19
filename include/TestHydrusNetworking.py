@@ -1,13 +1,15 @@
 import collections
-from . import HydrusConstants as HC
 import os
 import random
 import time
 import unittest
+
+from mock import patch
+
+from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
 from . import HydrusNetworking
-from mock import patch
 
 now = HydrusData.GetNow()
 
@@ -518,6 +520,3 @@ class TestBandwidthTracker( unittest.TestCase ):
             
             self.assertEqual( bandwidth_tracker.GetUsage( HC.BANDWIDTH_TYPE_DATA, None ), 1088 )
             self.assertEqual( bandwidth_tracker.GetUsage( HC.BANDWIDTH_TYPE_REQUESTS, None ), 3 )
-            
-        
-    

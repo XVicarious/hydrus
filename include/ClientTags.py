@@ -1,9 +1,10 @@
-from . import ClientConstants as CC
 import collections
-from . import HydrusGlobals as HG
-from . import HydrusSerialisable
-from . import HydrusTags
 import threading
+
+from . import ClientConstants as CC
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable, HydrusTags
+
 
 def ConvertTagSliceToString( tag_slice ):
     

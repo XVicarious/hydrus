@@ -1,5 +1,5 @@
-from . import HydrusServer
-from . import ServerServerResources
+from . import HydrusServer, ServerServerResources
+
 
 class HydrusServiceRestricted( HydrusServer.HydrusService ):
     
@@ -68,4 +68,3 @@ class HydrusServiceRepositoryFile( HydrusServiceRepository ):
 class HydrusServiceRepositoryTag( HydrusServiceRepository ):
     
     pass
-    

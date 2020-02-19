@@ -1,17 +1,15 @@
+import os
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientCaches
 from . import ClientConstants as CC
-from . import ClientGUIFunctions
-from . import ClientGUIMenus
-from . import ClientGUIShortcuts
+from . import ClientGUIFunctions, ClientGUIMenus, ClientGUIShortcuts
 from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
-import os
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
-from . import QtPorting as QP
 from . import QtPorting as QP
 
 CHILD_POSITION_PADDING = 24
@@ -967,5 +965,3 @@ class FrameThatTakesScrollablePanel( FrameThatResizes ):
         SetInitialTLWSizeAndPosition( self, self._frame_key )
         
         self.show()
-        
-    

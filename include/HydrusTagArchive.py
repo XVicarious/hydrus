@@ -569,5 +569,3 @@ class HydrusTagPairArchive( object ):
         self._c.execute( 'INSERT INTO pair_type ( pair_type ) VALUES ( ? );', ( pair_type, ) )
         
         self._pair_type = pair_type
-        
-    

@@ -1,19 +1,16 @@
-from . import ClientFiles
-from . import ClientImageHandling
-from . import ClientVideoHandling
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusImageHandling
-from . import HydrusGlobals as HG
-from . import HydrusThreading
-from . import HydrusVideoHandling
 import os
 import threading
 import time
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientFiles, ClientImageHandling, ClientVideoHandling
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusImageHandling, HydrusThreading, HydrusVideoHandling
 from . import QtPorting as QP
 
 LZ4_OK = False
@@ -748,5 +745,3 @@ class HydrusBitmap( object ):
     def GetSize( self ):
         
         return self._size
-        
-    

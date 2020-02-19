@@ -1,16 +1,10 @@
-import bs4
 import collections
 import cProfile
 import io
-from . import HydrusConstants as HC
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusSerialisable
-from . import HydrusText
+import itertools
 import locale
 import os
 import pstats
-import psutil
 import random
 import re
 import shutil
@@ -21,8 +15,16 @@ import sys
 import threading
 import time
 import traceback
+
+import bs4
+import psutil
 import yaml
-import itertools
+
+from . import HydrusConstants as HC
+from . import HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable, HydrusText
+
 
 def default_dict_list(): return collections.defaultdict( list )
 
@@ -1757,5 +1759,3 @@ class ServiceUpdate( object ):
     def ToTuple( self ):
         
         return ( self._action, self._row )
-        
-    

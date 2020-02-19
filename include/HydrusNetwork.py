@@ -1,12 +1,11 @@
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusNetworking
-from . import HydrusSerialisable
 import threading
 import urllib
+
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusNetworking, HydrusSerialisable
 
 INT_PARAMS = { 'expires', 'num', 'since', 'content_type', 'action', 'status' }
 BYTE_PARAMS = { 'access_key', 'account_type_key', 'subject_account_key', 'hash', 'registration_key', 'subject_hash', 'update_hash' }
@@ -2512,5 +2511,3 @@ class UpdateBuilder( object ):
     def GetUpdates( self ):
         
         return self._updates
-        
-    

@@ -1,43 +1,28 @@
-from . import ClientConstants as CC
-from . import ClientDefaults
-from . import ClientDownloading
-from . import ClientGUIACDropdown
-from . import ClientGUICommon
-from . import ClientGUIControls
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIFileSeedCache
-from . import ClientGUIFunctions
-from . import ClientGUIGallerySeedLog
-from . import ClientGUIListBoxes
-from . import ClientGUIListCtrl
-from . import ClientGUIMenus
-from . import ClientGUIOptionsPanels
-from . import ClientGUIScrolledPanels
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUIShortcuts
-from . import ClientGUITime
-from . import ClientGUITopLevelWindows
-from . import ClientImporting
-from . import ClientImportFileSeeds
-from . import ClientImportGallerySeeds
-from . import ClientImportLocal
-from . import ClientImportOptions
-from . import ClientTags
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusSerialisable
-from . import HydrusTags
-from . import HydrusText
 import os
 import re
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientDefaults, ClientDownloading, ClientGUIACDropdown,
+               ClientGUICommon, ClientGUIControls, ClientGUIDialogs,
+               ClientGUIDialogsQuick, ClientGUIFileSeedCache,
+               ClientGUIFunctions, ClientGUIGallerySeedLog,
+               ClientGUIListBoxes, ClientGUIListCtrl, ClientGUIMenus,
+               ClientGUIOptionsPanels, ClientGUIScrolledPanels,
+               ClientGUIScrolledPanelsEdit, ClientGUIShortcuts, ClientGUITime,
+               ClientGUITopLevelWindows, ClientImportFileSeeds,
+               ClientImportGallerySeeds, ClientImporting, ClientImportLocal,
+               ClientImportOptions, ClientTags)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable, HydrusTags, HydrusText
 from . import QtPorting as QP
+
 
 class CheckerOptionsButton( ClientGUICommon.BetterButton ):
     
@@ -2575,6 +2560,3 @@ class WatcherReviewPanel( ClientGUICommon.StaticBox ):
         if HG.client_controller.gui.IShouldRegularlyUpdate( self ):
             
             self._UpdateStatus()
-            
-        
-    

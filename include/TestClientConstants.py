@@ -1,15 +1,15 @@
-from . import ClientConstants as CC
-from . import ClientGUIManagement
-from . import ClientManagers
-from . import ClientNetworking
-from . import ClientCaches
-from . import ClientServices
 import collections
-from . import HydrusConstants as HC
 import os
 import unittest
+
+from . import ClientCaches
+from . import ClientConstants as CC
+from . import (ClientGUIManagement, ClientManagers,
+               ClientNetworking, ClientServices)
+from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
+
 
 class TestManagers( unittest.TestCase ):
     
@@ -122,5 +122,3 @@ class TestManagers( unittest.TestCase ):
         undo_manager.AddCommand( 'content_updates', command_3 )
         
         self.assertEqual( ( 'undo archive 2 files', None ), undo_manager.GetUndoRedoStrings() )
-        
-    

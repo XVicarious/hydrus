@@ -1,13 +1,13 @@
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusVideoHandling
 import os
 import re
 import subprocess
 import threading
 import time
 import traceback
+
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions, HydrusVideoHandling
+
 
 def ParseFFMPEGAudio( lines ):
     
@@ -110,5 +110,3 @@ def VideoHasAudio( path ):
         
         process.stdout.close()
         process.stderr.close()
-        
-    

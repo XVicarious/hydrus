@@ -1,18 +1,18 @@
-from . import ClientConstants as CC
-from . import ClientDefaults
-from . import ClientGUIDialogs
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUIScrolledPanelsManagement
-from . import ClientGUITopLevelWindows
-from . import ClientThreading
 import collections
-from . import HydrusConstants as HC
 import os
 import unittest
-from . import HydrusGlobals as HG
+
 from qtpy import QtCore as QC
 from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientDefaults, ClientGUIDialogs, ClientGUIScrolledPanelsEdit,
+               ClientGUIScrolledPanelsManagement, ClientGUITopLevelWindows,
+               ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusGlobals as HG
 from . import QtPorting as QP
+
 
 def HitButton( button ):
     
@@ -130,5 +130,3 @@ class TestNonDBDialogs( unittest.TestCase ):
             
         
         HG.test_controller.CallBlockingToQt( HG.test_controller.win, qt_code )
-        
-    

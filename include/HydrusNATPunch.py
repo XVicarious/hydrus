@@ -1,12 +1,11 @@
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusText
 import os
 import socket
 import subprocess
 import threading
 import traceback
+
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions, HydrusText
 
 # new stuff starts here
 
@@ -319,6 +318,3 @@ class ServicesUPnPManager( object ):
         with self._lock:
             
             self._RefreshUPnP()
-            
-        
-    

@@ -1,25 +1,19 @@
-from . import ClientCaches
-from . import ClientConstants as CC
-from . import ClientDB
-from . import ClientImportFileSeeds
-from . import ClientImportOptions
-from . import ClientManagers
-from . import ClientMigration
-from . import ClientServices
-from . import ClientTags
 import collections
 import hashlib
-from . import HydrusConstants as HC
-from . import HydrusExceptions
-from . import HydrusTagArchive
 import os
 import random
 import shutil
 import time
 import unittest
-from . import HydrusData
+
+from . import ClientCaches
+from . import ClientConstants as CC
+from . import (ClientDB, ClientImportFileSeeds, ClientImportOptions,
+               ClientManagers, ClientMigration, ClientServices, ClientTags)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
-from . import TestController
+from . import HydrusTagArchive, TestController
 
 current_tag_pool = [ 'blonde hair', 'blue eyes', 'bodysuit', 'character:samus aran', 'series:metroid', 'studio:nintendo' ]
 pending_tag_pool = [ 'favourites', 'kino', 'brown shirt', 'huge knees' ]
@@ -1010,6 +1004,3 @@ class TestMigration( unittest.TestCase ):
             self._test_pairs_list_to_htpa( content_type )
             self._test_pairs_service_to_list( content_type )
             self._test_pairs_list_to_service( content_type )
-            
-        
-    

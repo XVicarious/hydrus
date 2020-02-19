@@ -1,50 +1,28 @@
-from . import HydrusConstants as HC
-from . import HydrusExceptions
-from . import HydrusSerialisable
-from . import ClientConstants as CC
-from . import ClientDefaults
-from . import ClientGUIACDropdown
-from . import ClientGUICanvas
-from . import ClientGUICommon
-from . import ClientGUIControls
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIFunctions
-from . import ClientGUIImport
-from . import ClientGUIListBoxes
-from . import ClientGUIListCtrl
-from . import ClientGUIMedia
-from . import ClientGUIMenus
-from . import ClientGUIParsing
-from . import ClientGUIResults
-from . import ClientGUIScrolledPanels
-from . import ClientGUIFileSeedCache
-from . import ClientGUIGallerySeedLog
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUITopLevelWindows
-from . import ClientImportGallery
-from . import ClientImportLocal
-from . import ClientImportOptions
-from . import ClientImportSimpleURLs
-from . import ClientImportWatchers
-from . import ClientMedia
-from . import ClientParsing
-from . import ClientPaths
-from . import ClientSearch
-from . import ClientTags
-from . import ClientThreading
-from . import HydrusData
-from . import HydrusGlobals as HG
-from . import HydrusTags
-from . import HydrusThreading
 import os
 import random
 import time
 import traceback
-from . import QtPorting as QP
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientDefaults, ClientGUIACDropdown, ClientGUICanvas,
+               ClientGUICommon, ClientGUIControls, ClientGUIDialogs,
+               ClientGUIDialogsQuick, ClientGUIFileSeedCache,
+               ClientGUIFunctions, ClientGUIGallerySeedLog, ClientGUIImport,
+               ClientGUIListBoxes, ClientGUIListCtrl, ClientGUIMedia,
+               ClientGUIMenus, ClientGUIParsing, ClientGUIResults,
+               ClientGUIScrolledPanels, ClientGUIScrolledPanelsEdit,
+               ClientGUITopLevelWindows, ClientImportGallery,
+               ClientImportLocal, ClientImportOptions, ClientImportSimpleURLs,
+               ClientImportWatchers, ClientMedia, ClientParsing, ClientPaths,
+               ClientSearch, ClientTags, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable, HydrusTags, HydrusThreading
 from . import QtPorting as QP
 
 MANAGEMENT_TYPE_DUMPER = 0

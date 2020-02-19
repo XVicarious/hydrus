@@ -1,53 +1,5 @@
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientDefaults
-from . import ClientDragDrop
-from . import ClientExporting
-from . import ClientFiles
-from . import ClientGUIACDropdown
-from . import ClientGUIAsync
-from . import ClientGUICharts
-from . import ClientGUICommon
-from . import ClientGUIControls
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIFrames
-from . import ClientGUIFunctions
-from . import ClientGUIImport
-from . import ClientGUIListBoxes
-from . import ClientGUIListCtrl
-from . import ClientGUIScrolledPanels
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUIPanels
-from . import ClientGUIPopupMessages
-from . import ClientGUIShortcuts
-from . import ClientGUITags
-from . import ClientGUITime
-from . import ClientGUITopLevelWindows
-from . import ClientMigration
-from . import ClientNetworking
-from . import ClientNetworkingContexts
-from . import ClientNetworkingDomain
-from . import ClientNetworkingLogin
-from . import ClientParsing
-from . import ClientPaths
-from . import ClientRendering
-from . import ClientSearch
-from . import ClientSerialisable
-from . import ClientTags
-from . import ClientThreading
 import collections
 import http.cookiejar
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusFileHandling
-from . import HydrusGlobals as HG
-from . import HydrusNATPunch
-from . import HydrusPaths
-from . import HydrusSerialisable
-from . import HydrusTagArchive
-from . import HydrusText
 import os
 import queue
 import stat
@@ -55,11 +7,32 @@ import sys
 import threading
 import time
 import traceback
-from . import QtPorting as QP
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientData, ClientDefaults, ClientDragDrop, ClientExporting,
+               ClientFiles, ClientGUIACDropdown, ClientGUIAsync,
+               ClientGUICharts, ClientGUICommon, ClientGUIControls,
+               ClientGUIDialogs, ClientGUIDialogsQuick, ClientGUIFrames,
+               ClientGUIFunctions, ClientGUIImport, ClientGUIListBoxes,
+               ClientGUIListCtrl, ClientGUIPanels, ClientGUIPopupMessages,
+               ClientGUIScrolledPanels, ClientGUIScrolledPanelsEdit,
+               ClientGUIShortcuts, ClientGUITags, ClientGUITime,
+               ClientGUITopLevelWindows, ClientMigration, ClientNetworking,
+               ClientNetworkingContexts, ClientNetworkingDomain,
+               ClientNetworkingLogin, ClientParsing, ClientPaths,
+               ClientRendering, ClientSearch, ClientSerialisable,
+               ClientTags, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions, HydrusFileHandling
+from . import HydrusGlobals as HG
+from . import (HydrusNATPunch, HydrusPaths, HydrusSerialisable,
+               HydrusTagArchive, HydrusText)
 from . import QtPorting as QP
+
 
 class MigrateDatabasePanel( ClientGUIScrolledPanels.ReviewPanel ):
     
@@ -4392,5 +4365,3 @@ class ReviewThreads( ClientGUIScrolledPanels.ReviewPanel ):
         threads = self._controller.GetThreadsSnapshot()
         
         self._list_ctrl.SetData( threads )
-        
-    

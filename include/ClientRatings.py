@@ -1,8 +1,9 @@
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+
 from . import HydrusConstants as HC
 from . import HydrusExceptions
 from . import HydrusGlobals as HG
-from qtpy import QtCore as QC
-from qtpy import QtGui as QG
 
 LIKE = 0
 DISLIKE = 1
@@ -346,5 +347,3 @@ class RatingsManager( object ):
     def ResetService( self, service_key ):
         
         if service_key in self._service_keys_to_ratings: del self._service_keys_to_ratings[ service_key ]
-        
-    

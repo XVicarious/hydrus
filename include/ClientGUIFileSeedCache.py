@@ -1,30 +1,22 @@
-from . import ClientConstants as CC
-from . import ClientGUICommon
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIFunctions
-from . import ClientGUIListCtrl
-from . import ClientGUIMenus
-from . import ClientGUISerialisable
-from . import ClientGUIScrolledPanels
-from . import ClientGUITopLevelWindows
-from . import ClientImportFileSeeds
-from . import ClientImportOptions
-from . import ClientPaths
-from . import ClientSerialisable
-from . import ClientThreading
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusPaths
-from . import HydrusText
 import os
-from . import QtPorting as QP
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientGUICommon, ClientGUIDialogs, ClientGUIDialogsQuick,
+               ClientGUIFunctions, ClientGUIListCtrl, ClientGUIMenus,
+               ClientGUIScrolledPanels, ClientGUISerialisable,
+               ClientGUITopLevelWindows, ClientImportFileSeeds,
+               ClientImportOptions, ClientPaths, ClientSerialisable,
+               ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusPaths, HydrusText
 from . import QtPorting as QP
+
 
 class EditFileSeedCachePanel( ClientGUIScrolledPanels.EditPanel ):
     
@@ -816,6 +808,3 @@ class FileSeedCacheStatusControl( QW.QFrame ):
         if self._controller.gui.IShouldRegularlyUpdate( self ) or do_it_anyway:
             
             self._Update()
-            
-        
-    

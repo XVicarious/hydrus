@@ -1,50 +1,33 @@
-from . import ClientAPI
-from . import ClientCaches
-from . import ClientData
-from . import ClientDefaults
-from . import ClientFiles
-from . import ClientGUIShortcuts
-from . import ClientImageHandling
-from . import ClientMedia
-from . import ClientNetworkingBandwidth
-from . import ClientNetworkingContexts
-from . import ClientNetworkingDomain
-from . import ClientNetworkingLogin
-from . import ClientNetworkingSessions
-from . import ClientOptions
-from . import ClientRatings
-from . import ClientSearch
-from . import ClientServices
-from . import ClientTags
-from . import ClientThreading
 import collections
 import gc
 import hashlib
 import itertools
 import json
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusDB
-from . import HydrusExceptions
-from . import HydrusFileHandling
-from . import HydrusGlobals as HG
-from . import HydrusImageHandling
-from . import HydrusNetwork
-from . import HydrusNetworking
-from . import HydrusPaths
-from . import HydrusSerialisable
-from . import HydrusTags
-from . import HydrusVideoHandling
-from . import ClientConstants as CC
 import os
-import psutil
 import random
 import re
 import sqlite3
 import stat
 import time
 import traceback
+
+import psutil
 from qtpy import QtWidgets as QW
+
+from . import ClientAPI, ClientCaches
+from . import ClientConstants as CC
+from . import (ClientData, ClientDefaults, ClientFiles, ClientGUIShortcuts,
+               ClientImageHandling, ClientMedia, ClientNetworkingBandwidth,
+               ClientNetworkingContexts, ClientNetworkingDomain,
+               ClientNetworkingLogin, ClientNetworkingSessions,
+               ClientOptions, ClientRatings, ClientSearch, ClientServices,
+               ClientTags, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusDB, HydrusExceptions, HydrusFileHandling
+from . import HydrusGlobals as HG
+from . import (HydrusImageHandling, HydrusNetwork,
+               HydrusNetworking, HydrusPaths, HydrusSerialisable,
+               HydrusTags, HydrusVideoHandling)
 from . import QtPorting as QP
 
 #
@@ -14163,6 +14146,3 @@ class DB( HydrusDB.HydrusDB ):
         if os.path.exists( client_files_source ):
             
             HydrusPaths.MirrorTree( client_files_source, client_files_default )
-            
-        
-    

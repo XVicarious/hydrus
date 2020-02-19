@@ -1,19 +1,17 @@
-from . import HydrusAudioHandling
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusImageHandling
-from . import HydrusPaths
-from . import HydrusText
-from . import HydrusThreading
-import numpy
 import os
 import re
 import subprocess
 import sys
-import traceback
 import threading
 import time
+import traceback
+
+import numpy
+
+from . import HydrusAudioHandling
+from . import HydrusConstants as HC
+from . import (HydrusData, HydrusExceptions, HydrusImageHandling,
+               HydrusPaths, HydrusText, HydrusThreading)
 
 FFMPEG_MISSING_ERROR_PUBBED = False
 FFMPEG_NO_CONTENT_ERROR_PUBBED = False
@@ -900,4 +898,3 @@ class VideoRendererFFMPEG( object ):
     def Stop( self ):
         
         self.close()
-        

@@ -1,6 +1,7 @@
-from . import ClientLocalServerResources
-from . import HydrusServer
 from twisted.web.resource import NoResource
+
+from . import ClientLocalServerResources, HydrusServer
+
 
 class HydrusClientService( HydrusServer.HydrusService ):
     
@@ -92,5 +93,3 @@ class HydrusServiceClientAPI( HydrusClientService ):
         manage_pages.putChild( b'get_page_info', ClientLocalServerResources.HydrusResourceClientAPIRestrictedManagePagesGetPageInfo( self._service, self._client_requests_domain ) )
         
         return root
-        
-    

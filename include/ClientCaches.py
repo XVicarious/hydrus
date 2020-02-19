@@ -1,21 +1,18 @@
-from . import ClientFiles
-from . import ClientImageHandling
-from . import ClientParsing
-from . import ClientRendering
-from . import HydrusConstants as HC
-from . import HydrusExceptions
-from . import HydrusImageHandling
-from . import HydrusThreading
+import collections
 import json
 import os
 import threading
 import time
-from . import HydrusData
-from . import ClientConstants as CC
-from . import HydrusGlobals as HG
-import collections
 import traceback
 import weakref
+
+from . import ClientConstants as CC
+from . import ClientFiles, ClientImageHandling, ClientParsing, ClientRendering
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusImageHandling, HydrusThreading
+
 
 class DataCache( object ):
     
@@ -1303,7 +1300,3 @@ class ThumbnailCache( object ):
                 summary = 'The thumbnail for file {} was incorrect, but a later attempt to regenerate it or load the new file back failed.'.format( hash.hex() )
                 
                 self._HandleThumbnailException( e, summary )
-                
-            
-        
-    

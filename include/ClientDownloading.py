@@ -1,18 +1,14 @@
-from . import ClientImportFileSeeds
-from . import ClientImportOptions
-from . import ClientNetworkingDomain
-from . import ClientParsing
-from . import ClientThreading
-from . import HydrusConstants as HC
-from . import HydrusExceptions
-from . import HydrusPaths
-from . import HydrusSerialisable
-from . import HydrusThreading
 import random
 import threading
-from . import HydrusData
+
 from . import ClientConstants as CC
+from . import (ClientImportFileSeeds, ClientImportOptions,
+               ClientNetworkingDomain, ClientParsing, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
+from . import HydrusPaths, HydrusSerialisable, HydrusThreading
+
 
 def ConvertBooruToNewObjects( booru ):
     
@@ -572,4 +568,3 @@ class QuickDownloadManager( object ):
     def Wake( self ):
         
         self._new_files_event.set()
-        

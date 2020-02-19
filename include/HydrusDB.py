@@ -1,15 +1,14 @@
 import distutils.version
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusPaths
-from . import HydrusText
 import os
 import queue
 import sqlite3
-import traceback
 import time
+import traceback
+
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusPaths, HydrusText
 
 CONNECTION_REFRESH_TIME = 60 * 30
 
@@ -1042,5 +1041,3 @@ class TemporaryIntegerTable( object ):
         self._cursor.execute( 'DROP TABLE ' + self._table_name + ';' )
         
         return False
-        
-    

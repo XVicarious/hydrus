@@ -1,41 +1,27 @@
-from . import ClientCaches
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientGUIACDropdown
-from . import ClientGUICommon
-from . import ClientGUIControls
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIFunctions
-from . import ClientGUIListBoxes
-from . import ClientGUIListCtrl
-from . import ClientGUIMenus
-from . import ClientGUITopLevelWindows
-from . import ClientGUIScrolledPanels
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUIScrolledPanelsReview
-from . import ClientGUIShortcuts
-from . import ClientGUITagSuggestions
-from . import ClientManagers
-from . import ClientMedia
-from . import ClientMigration
-from . import ClientTags
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusNetwork
-from . import HydrusSerialisable
-from . import HydrusTags
-from . import HydrusText
 import itertools
 import os
-from . import QtPorting as QP
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientCaches
+from . import ClientConstants as CC
+from . import (ClientData, ClientGUIACDropdown, ClientGUICommon,
+               ClientGUIControls, ClientGUIDialogs, ClientGUIDialogsQuick,
+               ClientGUIFunctions, ClientGUIListBoxes, ClientGUIListCtrl,
+               ClientGUIMenus, ClientGUIScrolledPanels,
+               ClientGUIScrolledPanelsEdit, ClientGUIScrolledPanelsReview,
+               ClientGUIShortcuts, ClientGUITagSuggestions,
+               ClientGUITopLevelWindows, ClientManagers, ClientMedia,
+               ClientMigration, ClientTags)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusNetwork, HydrusSerialisable, HydrusTags, HydrusText
 from . import QtPorting as QP
+
 
 class EditTagFilterPanel( ClientGUIScrolledPanels.EditPanel ):
     

@@ -1,24 +1,17 @@
 import bisect
 import collections
-from . import ClientConstants as CC
-from . import ClientFiles
-from . import ClientRatings
-from . import ClientSearch
-from . import ClientTags
-from . import HydrusConstants as HC
-from . import HydrusTags
-from . import HydrusText
+import itertools
 import os
 import random
 import time
 import traceback
-from . import HydrusData
-from . import HydrusFileHandling
-from . import HydrusExceptions
+
+from . import ClientConstants as CC
+from . import ClientFiles, ClientRatings, ClientSearch, ClientTags
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions, HydrusFileHandling
 from . import HydrusGlobals as HG
-from . import HydrusImageHandling
-from . import HydrusSerialisable
-import itertools
+from . import HydrusImageHandling, HydrusSerialisable, HydrusTags, HydrusText
 
 hashes_to_jpeg_quality = {}
 hashes_to_pixel_hashes = {}
@@ -3814,6 +3807,3 @@ class TagsManager( object ):
             del service_keys_to_statuses_to_tags[ service_key ]
             
             self._cache_is_dirty = True
-            
-        
-    

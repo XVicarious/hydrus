@@ -1,29 +1,22 @@
+import os
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientConstants as CC
-from . import ClientData
-from . import ClientDragDrop
-from . import ClientGUICanvas
-from . import ClientGUICommon
-from . import ClientGUIDialogs
-from . import ClientGUIFunctions
-from . import ClientGUIListBoxes
-from . import ClientGUIMediaControls
-from . import ClientGUIMenus
-from . import ClientGUIMPV
-from . import ClientGUITopLevelWindows
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUIScrolledPanelsManagement
-from . import ClientGUIShortcuts
-from . import ClientGUIShortcutControls
-from . import ClientMedia
+from . import (ClientData, ClientDragDrop, ClientGUICanvas, ClientGUICommon,
+               ClientGUIDialogs, ClientGUIFunctions, ClientGUIListBoxes,
+               ClientGUIMediaControls, ClientGUIMenus, ClientGUIMPV,
+               ClientGUIScrolledPanelsEdit, ClientGUIScrolledPanelsManagement,
+               ClientGUIShortcutControls, ClientGUIShortcuts,
+               ClientGUITopLevelWindows, ClientMedia)
 from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
 from . import HydrusSerialisable
-import os
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
 from . import QtPorting as QP
+
 
 class FullscreenHoverFrame( QW.QFrame ):
     
@@ -1313,6 +1306,3 @@ class FullscreenHoverFrameTags( FullscreenHoverFrame ):
             FullscreenHoverFrame.SetDisplayMedia( self, canvas_key, media )
             
             self._ResetTags()
-            
-        
-    

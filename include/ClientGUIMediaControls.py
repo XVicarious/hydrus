@@ -1,16 +1,13 @@
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientConstants as CC
-from . import ClientData
-from . import ClientGUICommon
-from . import ClientGUIFunctions
-from . import ClientGUIMenus
-from . import ClientGUIMPV
-from . import ClientGUITopLevelWindows
+from . import (ClientData, ClientGUICommon, ClientGUIFunctions,
+               ClientGUIMenus, ClientGUIMPV, ClientGUITopLevelWindows)
 from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
 from . import QtPorting as QP
 
 AUDIO_GLOBAL = 0
@@ -285,5 +282,3 @@ class VolumeSlider( QW.QSlider ):
         volume = self._GetCorrectValue()
         
         self.setValue( volume )
-        
-    

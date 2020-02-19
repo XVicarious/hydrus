@@ -1,26 +1,21 @@
-from . import ClientConstants as CC
-from . import ClientNetworking
-from . import ClientNetworkingBandwidth
-from . import ClientNetworkingContexts
-from . import ClientNetworkingDomain
-from . import ClientNetworkingJobs
-from . import ClientNetworkingLogin
-from . import ClientNetworkingSessions
-from . import ClientParsing
-from . import ClientServices
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusNetworking
 import os
-from . import TestController
 import threading
 import time
 import unittest
-from . import HydrusGlobals as HG
-from httmock import all_requests, urlmatch, HTTMock, response
+
+from httmock import HTTMock, all_requests, response, urlmatch
 from mock import patch
+
+from . import ClientConstants as CC
+from . import (ClientNetworking, ClientNetworkingBandwidth,
+               ClientNetworkingContexts, ClientNetworkingDomain,
+               ClientNetworkingJobs, ClientNetworkingLogin,
+               ClientNetworkingSessions, ClientParsing, ClientServices)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusNetworking, TestController
 
 # some gumpf
 GOOD_RESPONSE = bytes( range( 256 ) )
@@ -811,5 +806,3 @@ class TestNetworkingJobHydrus( unittest.TestCase ):
         # test for both normal and login
         
         pass
-        
-    

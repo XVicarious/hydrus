@@ -1,28 +1,21 @@
+import collections
+import os
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientCaches
 from . import ClientConstants as CC
-from . import ClientData
-from . import ClientGUICommon
-from . import ClientGUIFunctions
-from . import ClientGUIMenus
-from . import ClientGUIShortcuts
-from . import ClientGUITopLevelWindows
-from . import ClientMedia
-from . import ClientSearch
-from . import ClientSerialisable
-from . import ClientTags
-import collections
+from . import (ClientData, ClientGUICommon, ClientGUIFunctions, ClientGUIMenus,
+               ClientGUIShortcuts, ClientGUITopLevelWindows, ClientMedia,
+               ClientSearch, ClientSerialisable, ClientTags)
 from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
-from . import HydrusSerialisable
-from . import HydrusTags
-import os
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
+from . import HydrusSerialisable, HydrusTags
 from . import QtPorting as QP
-from . import QtPorting as QP
+
 
 class AddEditDeleteListBox( QW.QWidget ):
     
@@ -3401,5 +3394,3 @@ class ListBoxTagsSelectionTagsDialog( ListBoxTagsSelection ):
         if len( self._selected_terms ) > 0:
             
             self._delete_func( set( self._selected_terms ) )
-            
-        

@@ -1,28 +1,23 @@
-from . import ClientCaches
-from . import ClientData
-from . import ClientConstants as CC
-from . import ClientGUIFunctions
-from . import ClientGUIMenus
-from . import ClientGUITopLevelWindows
-from . import ClientMedia
-from . import ClientPaths
-from . import ClientRatings
-from . import ClientThreading
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusText
 import os
 import re
 import sys
 import threading
 import time
 import traceback
-from . import QtPorting as QP
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientCaches
+from . import ClientConstants as CC
+from . import (ClientData, ClientGUIFunctions, ClientGUIMenus,
+               ClientGUITopLevelWindows, ClientMedia,
+               ClientPaths, ClientRatings, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusText
 from . import QtPorting as QP
 
 CANVAS_MEDIA_VIEWER = 0
@@ -2634,5 +2629,3 @@ class TextAndGauge( QW.QWidget ):
         
         self._gauge.SetRange( range )
         self._gauge.SetValue( value )
-        
-    

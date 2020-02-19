@@ -1,24 +1,19 @@
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientGUICommon
-from . import ClientGUIDialogs
-from . import ClientGUIListBoxes
-from . import ClientGUIParsing
-from . import ClientMedia
-from . import ClientParsing
-from . import ClientSearch
-from . import ClientTags
-from . import ClientThreading
 import collections
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientData, ClientGUICommon, ClientGUIDialogs,
+               ClientGUIListBoxes, ClientGUIParsing, ClientMedia,
+               ClientParsing, ClientSearch, ClientTags, ClientThreading)
 from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
 from . import HydrusSerialisable
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
 from . import QtPorting as QP
-from . import QtPorting as QP
+
 
 class ListBoxTagsSuggestionsFavourites( ClientGUIListBoxes.ListBoxTagsStrings ):
     
@@ -620,6 +615,3 @@ class SuggestedTagsPanel( QW.QWidget ):
                 
             
             panel.TakeFocusForUser()
-            
-        
-    

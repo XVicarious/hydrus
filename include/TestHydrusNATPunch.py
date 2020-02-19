@@ -1,10 +1,12 @@
-from . import ClientConstants as CC
-from . import HydrusConstants as HC
-from . import HydrusNATPunch
 import os
 import random
 import time
 import unittest
+
+from . import ClientConstants as CC
+from . import HydrusConstants as HC
+from . import HydrusNATPunch
+
 
 class TestNATPunch( unittest.TestCase ):
     
@@ -38,5 +40,3 @@ class TestNATPunch( unittest.TestCase ):
         
         self.assertNotIn( ( description_tcp, internal_client, internal_port, external_port, 'TCP' ), mappings_without_lease_times )
         self.assertNotIn( ( description_udp, internal_client, internal_port, external_port, 'UDP' ), mappings_without_lease_times )
-        
-    

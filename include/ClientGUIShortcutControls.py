@@ -1,21 +1,19 @@
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientGUIACDropdown
-from . import ClientGUICommon
-from . import ClientGUIDialogsQuick
-from . import ClientGUIListCtrl
-from . import ClientGUIScrolledPanels
-from . import ClientGUIShortcuts
-from . import ClientGUITopLevelWindows
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusSerialisable
+import os
+
 from qtpy import QtCore as QC
 from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientData, ClientGUIACDropdown, ClientGUICommon,
+               ClientGUIDialogsQuick, ClientGUIListCtrl,
+               ClientGUIScrolledPanels, ClientGUIShortcuts,
+               ClientGUITopLevelWindows)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable
 from . import QtPorting as QP
-import os
+
 
 class ApplicationCommandWidget( ClientGUIScrolledPanels.EditPanel ):
     
@@ -1277,5 +1275,3 @@ class MouseShortcutButton( QW.QPushButton ):
         self._shortcut = shortcut
         
         self._SetShortcutString()
-        
-    

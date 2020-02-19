@@ -1,6 +1,7 @@
 import os
 import traceback
 
+
 class HydrusException( Exception ):
     
     def __str__( self ):

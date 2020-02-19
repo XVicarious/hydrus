@@ -1,12 +1,13 @@
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
 import queue
 import threading
+import time
 import traceback
 import weakref
+
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
-import time
+
 
 class HydrusPubSub( object ):
     
@@ -215,5 +216,3 @@ class HydrusPubSub( object ):
         with self._lock:
             
             return len( self._pubsubs ) > 0
-            
-        

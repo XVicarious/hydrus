@@ -1,9 +1,10 @@
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
 import itertools
 import os
+
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+
 
 def GetAllHashes( file_type ):
     
@@ -77,6 +78,3 @@ def IterateAllPaths( file_type ):
                 
             
             yield os.path.join( dir, filename )
-            
-        
-    

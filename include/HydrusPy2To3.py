@@ -1,5 +1,7 @@
-from . import HydrusConstants as HC
 import os
+
+from . import HydrusConstants as HC
+
 
 def do_2to3_test():
     
@@ -16,6 +18,3 @@ def do_2to3_test():
             print( message )
             
             raise Exception( 'Client needs a clean install!' )
-            
-        
-    

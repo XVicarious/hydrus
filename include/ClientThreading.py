@@ -1,14 +1,15 @@
-from . import HydrusExceptions
+import os
 import queue
 import threading
 import time
 import traceback
+
 from . import HydrusConstants as HC
-from . import HydrusData
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
 from . import HydrusThreading
-import os
 from . import QtPorting as QP
+
 
 class JobKey( object ):
     
@@ -579,5 +580,3 @@ class QtAwareRepeatingJob(HydrusThreading.RepeatingJob):
     def IsDead( self ):
         
         return self._MyWindowDead()
-        
-    

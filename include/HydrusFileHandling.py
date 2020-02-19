@@ -1,20 +1,15 @@
 import gc
 import hashlib
-from . import HydrusAudioHandling
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusDocumentHandling
-from . import HydrusExceptions
-from . import HydrusFlashHandling
-from . import HydrusImageHandling
-from . import HydrusNetwork
-from . import HydrusPaths
-from . import HydrusSerialisable
-from . import HydrusText
-from . import HydrusVideoHandling
 import os
 import threading
 import traceback
+
+from . import HydrusAudioHandling
+from . import HydrusConstants as HC
+from . import (HydrusData, HydrusDocumentHandling, HydrusExceptions,
+               HydrusFlashHandling, HydrusImageHandling,
+               HydrusNetwork, HydrusPaths, HydrusSerialisable,
+               HydrusText, HydrusVideoHandling)
 
 # Mime
 
@@ -361,4 +356,3 @@ def GetMime( path, ok_to_look_for_hydrus_updates = False ):
         
     
     return HC.APPLICATION_UNKNOWN
-    

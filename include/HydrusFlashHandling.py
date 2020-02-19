@@ -1,10 +1,10 @@
-from . import hexagonitswfheader
-from . import HydrusConstants as HC
-from . import HydrusData
 import os
 import subprocess
 import time
 import traceback
+
+from . import HydrusConstants as HC
+from . import HydrusData, hexagonitswfheader
 
 if HC.PLATFORM_LINUX:
     
@@ -60,4 +60,3 @@ def RenderPageToFile( path, temp_path, page_index ):
         
     
     p.communicate()
-    

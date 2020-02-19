@@ -1,12 +1,15 @@
 import collections
+import os
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
-import os
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
 from . import QtPorting as QP
+
 
 def AppendMenu( menu, submenu, label ):
     
@@ -180,4 +183,3 @@ def SanitiseLabel( label ):
         
     
     return label.replace( '&', '&&' )
-    

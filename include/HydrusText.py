@@ -137,4 +137,3 @@ def StripIOInputLine( t ):
     t = t.strip()
     
     return t
-    

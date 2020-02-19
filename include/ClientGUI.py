@@ -1,63 +1,7 @@
-from . import HydrusConstants as HC
-from . import ClientConstants as CC
-from . import ClientCaches
-from . import ClientData
-from . import ClientDownloading
-from . import ClientDragDrop
-from . import ClientExporting
-from . import ClientGUIAsync
-from . import ClientGUICommon
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsManage
-from . import ClientGUIDialogsQuick
-from . import ClientGUIExport
-from . import ClientGUIFrames
-from . import ClientGUIFunctions
-from . import ClientGUIImport
-from . import ClientGUILogin
-from . import ClientGUIManagement
-from . import ClientGUIMediaControls
-from . import ClientGUIMenus
-from . import ClientGUIMPV
-from . import ClientGUIPages
-from . import ClientGUIParsing
-from . import ClientGUIPopupMessages
-from . import ClientGUIPredicates
-from . import ClientGUIScrolledPanels
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUIScrolledPanelsManagement
-from . import ClientGUIScrolledPanelsReview
-from . import ClientGUIShortcuts
-from . import ClientGUIShortcutControls
-from . import ClientGUIStyle
-from . import ClientGUITags
-from . import ClientGUITopLevelWindows
-from . import ClientMedia
-from . import ClientNetworkingContexts
-from . import ClientNetworkingJobs
-from . import ClientParsing
-from . import ClientPaths
-from . import ClientRendering
-from . import ClientSearch
-from . import ClientServices
-from . import ClientTags
-from . import ClientThreading
 import collections
-import cv2
 import gc
 import hashlib
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusImageHandling
-from . import HydrusPaths
-from . import HydrusGlobals as HG
-from . import HydrusNetwork
-from . import HydrusNetworking
-from . import HydrusSerialisable
-from . import HydrusText
-from . import HydrusVideoHandling
 import os
-import PIL
 import random
 import re
 import sqlite3
@@ -68,11 +12,37 @@ import threading
 import time
 import traceback
 import types
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
-from . import QtPorting as QP
+
+import cv2
+import PIL
 import qtpy
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientCaches
+from . import ClientConstants as CC
+from . import (ClientData, ClientDownloading, ClientDragDrop, ClientExporting,
+               ClientGUIAsync, ClientGUICommon, ClientGUIDialogs,
+               ClientGUIDialogsManage, ClientGUIDialogsQuick, ClientGUIExport,
+               ClientGUIFrames, ClientGUIFunctions, ClientGUIImport,
+               ClientGUILogin, ClientGUIManagement, ClientGUIMediaControls,
+               ClientGUIMenus, ClientGUIMPV, ClientGUIPages, ClientGUIParsing,
+               ClientGUIPopupMessages, ClientGUIPredicates,
+               ClientGUIScrolledPanels, ClientGUIScrolledPanelsEdit,
+               ClientGUIScrolledPanelsManagement,
+               ClientGUIScrolledPanelsReview, ClientGUIShortcutControls,
+               ClientGUIShortcuts, ClientGUIStyle, ClientGUITags,
+               ClientGUITopLevelWindows, ClientMedia,
+               ClientNetworkingContexts, ClientNetworkingJobs, ClientParsing,
+               ClientPaths, ClientRendering, ClientSearch, ClientServices,
+               ClientTags, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import (HydrusImageHandling, HydrusNetwork,
+               HydrusNetworking, HydrusPaths, HydrusSerialisable,
+               HydrusText, HydrusVideoHandling)
 from . import QtPorting as QP
 
 MENU_ORDER = [ 'file', 'undo', 'pages', 'database', 'pending', 'network', 'services', 'help' ]
@@ -6104,5 +6074,3 @@ class FrameSplash( QW.QWidget ):
         self._cancel_shutdown_maintenance = ClientGUICommon.BetterButton( self, 'stop shutdown maintenance', self.CancelShutdownMaintenance )
         
         self._vbox.insertWidget( 0, self._cancel_shutdown_maintenance )
-        
-    

@@ -1,12 +1,13 @@
 import collections
-from . import HydrusConstants as HC
-from . import HydrusGlobals as HG
-from . import ClientData
-from . import ClientTags
 import os
 import unittest
-from . import HydrusData
+
 from . import ClientConstants as CC
+from . import ClientData, ClientTags
+from . import HydrusConstants as HC
+from . import HydrusData
+from . import HydrusGlobals as HG
+
 
 class TestFunctions( unittest.TestCase ):
     
@@ -51,5 +52,3 @@ class TestFunctions( unittest.TestCase ):
         # this test only works on anglo computers; it is mostly so I can check it is working on mine
         
         self.assertEqual( i_pretty, '123,456,789' )
-        
-    

@@ -1,27 +1,21 @@
+import os
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientConstants as CC
-from . import ClientGUICommon
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIFunctions
-from . import ClientGUIListCtrl
-from . import ClientGUIMenus
-from . import ClientGUISerialisable
-from . import ClientGUIScrolledPanels
-from . import ClientGUITopLevelWindows
-from . import ClientImportGallerySeeds
-from . import ClientPaths
-from . import ClientSerialisable
+from . import (ClientGUICommon, ClientGUIDialogs, ClientGUIDialogsQuick,
+               ClientGUIFunctions, ClientGUIListCtrl, ClientGUIMenus,
+               ClientGUIScrolledPanels, ClientGUISerialisable,
+               ClientGUITopLevelWindows, ClientImportGallerySeeds,
+               ClientPaths, ClientSerialisable)
 from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
 from . import HydrusText
-import os
 from . import QtPorting as QP
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
-from . import QtPorting as QP
+
 
 class EditGallerySeedLogPanel( ClientGUIScrolledPanels.EditPanel ):
     
@@ -656,6 +650,3 @@ class GallerySeedLogStatusControl( QW.QFrame ):
         if self._controller.gui.IShouldRegularlyUpdate( self ):
             
             self._Update()
-            
-        
-    

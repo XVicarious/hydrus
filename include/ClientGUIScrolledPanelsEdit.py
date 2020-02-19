@@ -1,48 +1,27 @@
-from . import ClientConstants as CC
-from . import ClientDefaults
-from . import ClientDownloading
-from . import ClientDuplicates
-from . import ClientImporting
-from . import ClientGUICommon
-from . import ClientGUIControls
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIFunctions
-from . import ClientGUIImport
-from . import ClientGUIListBoxes
-from . import ClientGUIListCtrl
-from . import ClientGUIMenus
-from . import ClientGUIScrolledPanels
-from . import ClientGUIFileSeedCache
-from . import ClientGUIGallerySeedLog
-from . import ClientGUIMPV
-from . import ClientGUITags
-from . import ClientGUITime
-from . import ClientGUITopLevelWindows
-from . import ClientImportFileSeeds
-from . import ClientImportOptions
-from . import ClientImportSubscriptions
-from . import ClientMedia
-from . import ClientNetworkingContexts
-from . import ClientNetworkingDomain
-from . import ClientParsing
-from . import ClientPaths
-from . import ClientSearch
-from . import ClientTags
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusNetwork
-from . import HydrusSerialisable
-from . import HydrusTags
-from . import HydrusText
 import os
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientDefaults, ClientDownloading, ClientDuplicates,
+               ClientGUICommon, ClientGUIControls, ClientGUIDialogs,
+               ClientGUIDialogsQuick, ClientGUIFileSeedCache,
+               ClientGUIFunctions, ClientGUIGallerySeedLog, ClientGUIImport,
+               ClientGUIListBoxes, ClientGUIListCtrl, ClientGUIMenus,
+               ClientGUIMPV, ClientGUIScrolledPanels, ClientGUITags,
+               ClientGUITime, ClientGUITopLevelWindows, ClientImportFileSeeds,
+               ClientImporting, ClientImportOptions, ClientImportSubscriptions,
+               ClientMedia, ClientNetworkingContexts, ClientNetworkingDomain,
+               ClientParsing, ClientPaths, ClientSearch, ClientTags)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusNetwork, HydrusSerialisable, HydrusTags, HydrusText
 from . import QtPorting as QP
+
 
 class EditAccountTypePanel( ClientGUIScrolledPanels.EditPanel ):
     
@@ -7449,5 +7428,3 @@ class EditURLClassLinksPanel( ClientGUIScrolledPanels.EditPanel ):
         url_class_keys_to_parser_keys = { url_class_key : parser_key for ( url_class_key, parser_key ) in self._parser_list_ctrl.GetData() if parser_key is not None }
         
         return url_class_keys_to_parser_keys
-        
-    

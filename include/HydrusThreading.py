@@ -1,14 +1,14 @@
 import bisect
 import collections
-from . import HydrusExceptions
+import os
 import queue
 import random
 import threading
 import time
 import traceback
-from . import HydrusData
+
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
-import os
 
 NEXT_THREAD_CLEAROUT = 0
 
@@ -841,6 +841,3 @@ class RepeatingJob( SchedulableJob ):
             self._next_work_time = HydrusData.GetNowFloat() + self._period
             
             self._scheduler.AddJob( self )
-            
-        
-    

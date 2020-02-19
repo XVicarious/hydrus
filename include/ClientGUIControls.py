@@ -1,27 +1,21 @@
+import os
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientCaches
 from . import ClientConstants as CC
-from . import ClientData
-from . import ClientGUICommon
-from . import ClientGUIDialogs
-from . import ClientGUIFunctions
-from . import ClientGUIListCtrl
-from . import ClientGUIMenus
-from . import ClientGUIScrolledPanels
-from . import ClientGUIShortcuts
-from . import ClientGUITime
-from . import ClientGUITopLevelWindows
-from . import ClientParsing
+from . import (ClientData, ClientGUICommon, ClientGUIDialogs,
+               ClientGUIFunctions, ClientGUIListCtrl, ClientGUIMenus,
+               ClientGUIScrolledPanels, ClientGUIShortcuts, ClientGUITime,
+               ClientGUITopLevelWindows, ClientParsing)
 from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
-from . import HydrusNetworking
-from . import HydrusText
-import os
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
+from . import HydrusNetworking, HydrusText
 from . import QtPorting as QP
+
 
 class BandwidthRulesCtrl( ClientGUICommon.StaticBox ):
     
@@ -2213,5 +2207,3 @@ class TextAndPasteCtrl( QW.QWidget ):
     def SetValue( self, text ):
         
         self._text_input.setText( text )
-        
-    

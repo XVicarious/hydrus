@@ -1,13 +1,14 @@
-import numpy
-import numpy.core.multiarray # important this comes before cv!
-from . import ClientConstants as CC
-import cv2
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusImageHandling
-from . import HydrusGlobals as HG
 from functools import reduce
+
+import cv2
+import numpy
+import numpy.core.multiarray  # important this comes before cv!
+
+from . import ClientConstants as CC
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusImageHandling
 
 cv_interpolation_enum_lookup = {}
 
@@ -214,5 +215,3 @@ def ResizeNumPyImageForMediaViewer( mime, numpy_image, target_resolution ):
             
         
         return cv2.resize( numpy_image, ( target_width, target_height ), interpolation = interpolation )
-        
-    

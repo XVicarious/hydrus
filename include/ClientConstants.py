@@ -1,8 +1,10 @@
-from . import HydrusConstants as HC
 import os
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import HydrusConstants as HC
 
 #
 

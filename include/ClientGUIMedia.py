@@ -1,20 +1,18 @@
-from . import ClientConstants as CC
-from . import ClientGUIDialogsQuick
-from . import ClientGUIMenus
-from . import ClientMedia
-from . import ClientPaths
-from . import ClientThreading
-from . import HydrusExceptions
-from . import HydrusPaths
 import os
 import random
 import time
-from . import HydrusData
-from . import HydrusGlobals as HG
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientGUIDialogsQuick, ClientGUIMenus, ClientMedia,
+               ClientPaths, ClientThreading, HydrusData, HydrusExceptions)
+from . import HydrusGlobals as HG
+from . import HydrusPaths
 from . import QtPorting as QP
+
 
 def CopyMediaURLs( medias ):
     
@@ -517,5 +515,3 @@ def AddServiceKeysToMenu( event_handler, menu, service_keys, phrase, description
             
         
         ClientGUIMenus.AppendMenu( menu, submenu, phrase + '\u2026' )
-        
-    

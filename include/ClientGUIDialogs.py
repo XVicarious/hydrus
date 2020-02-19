@@ -1,55 +1,36 @@
-from . import HydrusConstants as HC
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientDefaults
-from . import ClientDownloading
-from . import ClientDragDrop
-from . import ClientExporting
-from . import ClientCaches
-from . import ClientFiles
-from . import ClientGUIACDropdown
-from . import ClientGUIFrames
-from . import ClientGUICommon
-from . import ClientGUIDialogsQuick
-from . import ClientGUIFunctions
-from . import ClientGUIImport
-from . import ClientGUIListBoxes
-from . import ClientGUIListCtrl
-from . import ClientGUIPredicates
-from . import ClientGUIShortcuts
-from . import ClientGUITime
-from . import ClientGUITopLevelWindows
-from . import ClientImporting
-from . import ClientTags
-from . import ClientThreading
 import collections
 import gc
-from . import HydrusExceptions
-from . import HydrusFileHandling
-from . import HydrusNATPunch
-from . import HydrusNetwork
-from . import HydrusPaths
-from . import HydrusSerialisable
-from . import HydrusTags
-from . import HydrusThreading
 import itertools
 import os
+import queue
 import random
 import re
-import queue
 import shutil
 import stat
 import string
 import threading
 import time
 import traceback
+
 import yaml
-from . import HydrusData
-from . import ClientSearch
-from . import HydrusGlobals as HG
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientCaches
+from . import ClientConstants as CC
+from . import (ClientData, ClientDefaults, ClientDownloading, ClientDragDrop,
+               ClientExporting, ClientFiles, ClientGUIACDropdown,
+               ClientGUICommon, ClientGUIDialogsQuick, ClientGUIFrames,
+               ClientGUIFunctions, ClientGUIImport, ClientGUIListBoxes,
+               ClientGUIListCtrl, ClientGUIPredicates, ClientGUIShortcuts,
+               ClientGUITime, ClientGUITopLevelWindows, ClientImporting,
+               ClientSearch, ClientTags, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions, HydrusFileHandling
+from . import HydrusGlobals as HG
+from . import (HydrusNATPunch, HydrusNetwork, HydrusPaths,
+               HydrusSerialisable, HydrusTags, HydrusThreading)
 from . import QtPorting as QP
 
 # Option Enums
@@ -1346,4 +1327,3 @@ class DialogYesYesNo( Dialog ):
     def GetValue( self ):
         
         return self._value
-        

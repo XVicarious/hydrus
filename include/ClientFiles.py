@@ -1,23 +1,19 @@
-from . import ClientConstants as CC
-from . import ClientImageHandling
-from . import ClientPaths
-from . import ClientThreading
 import collections
 import gc
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusFileHandling
-from . import HydrusGlobals as HG
-from . import HydrusImageHandling
-from . import HydrusNetworking
-from . import HydrusPaths
-from . import HydrusThreading
 import os
 import random
 import threading
 import time
+
 from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import ClientImageHandling, ClientPaths, ClientThreading
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions, HydrusFileHandling
+from . import HydrusGlobals as HG
+from . import (HydrusImageHandling, HydrusNetworking,
+               HydrusPaths, HydrusThreading)
 from . import QtPorting as QP
 
 REGENERATE_FILE_DATA_JOB_FILE_METADATA = 0
@@ -2169,4 +2165,3 @@ class FilesMaintenanceManager( object ):
     def Start( self ):
         
         self._controller.CallToThreadLongRunning( self.MainLoopBackgroundWork )
-        

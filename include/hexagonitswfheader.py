@@ -114,4 +114,3 @@ def parse(input):
 
     input.close()
     return header
-    

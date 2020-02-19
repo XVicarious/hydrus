@@ -1,16 +1,18 @@
+import os
+import re
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientConstants as CC
 from . import ClientData
 from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
-from . import HydrusNetworking
-from . import HydrusSerialisable
-import re
-import os
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
+from . import HydrusNetworking, HydrusSerialisable
 from . import QtPorting as QP
+
 
 def GetClientDefaultOptions():
     
@@ -640,4 +642,3 @@ def SetDefaultLoginManagerScripts( login_manager ):
     default_login_scripts = GetDefaultLoginScripts()
     
     login_manager.SetLoginScripts( default_login_scripts )
-    

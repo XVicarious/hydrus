@@ -1,22 +1,20 @@
-from . import ClientConstants as CC
-from . import ClientImageHandling
-from . import ClientImporting
-from . import ClientParsing
-from . import ClientPaths
 import collections
-import cv2
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusGlobals as HG
-from . import HydrusPaths
-from . import HydrusSerialisable
-import numpy
 import os
 import shutil
 import struct
+
+import cv2
+import numpy
 from qtpy import QtCore as QC
 from qtpy import QtGui as QG
 from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import ClientImageHandling, ClientImporting, ClientParsing, ClientPaths
+from . import HydrusConstants as HC
+from . import HydrusData
+from . import HydrusGlobals as HG
+from . import HydrusPaths, HydrusSerialisable
 from . import QtPorting as QP
 
 if cv2.__version__.startswith( '2' ):
@@ -360,4 +358,3 @@ def WrapText( painter, text, width ):
         
     
     return lines
-    

@@ -1,10 +1,11 @@
-from . import ClientConstants as CC
-from . import ClientGUIShortcuts
-from . import ClientGUITopLevelWindows
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import ClientGUIShortcuts, ClientGUITopLevelWindows
 from . import QtPorting as QP
+
 
 class ResizingEventFilter( QC.QObject ):
     

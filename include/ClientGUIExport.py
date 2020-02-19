@@ -1,30 +1,24 @@
-from . import ClientConstants as CC
-from . import ClientExporting
-from . import ClientGUIACDropdown
-from . import ClientGUICommon
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIListBoxes
-from . import ClientGUIListCtrl
-from . import ClientGUIScrolledPanels
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUITime
-from . import ClientGUITopLevelWindows
-from . import ClientSearch
-from . import ClientTags
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusPaths
 import os
 import stat
 import time
 import traceback
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientExporting, ClientGUIACDropdown, ClientGUICommon,
+               ClientGUIDialogs, ClientGUIDialogsQuick, ClientGUIListBoxes,
+               ClientGUIListCtrl, ClientGUIScrolledPanels,
+               ClientGUIScrolledPanelsEdit, ClientGUITime,
+               ClientGUITopLevelWindows, ClientSearch, ClientTags)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusPaths
 from . import QtPorting as QP
+
 
 class EditExportFoldersPanel( ClientGUIScrolledPanels.EditPanel ):
     
@@ -968,6 +962,3 @@ class ReviewExportFilesPanel( ClientGUIScrolledPanels.ReviewPanel ):
         if directory is not None and directory != '':
             
             HydrusPaths.LaunchDirectory( directory )
-        
-        
-    

@@ -1,23 +1,21 @@
-from . import ClientConstants as CC
-from . import ClientDefaults
-from . import ClientNetworkingContexts
-from . import ClientNetworkingDomain
-from . import ClientNetworkingJobs
-from . import ClientParsing
-from . import ClientThreading
-from . import HydrusConstants as HC
-from . import HydrusGlobals as HG
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusSerialisable
 import itertools
-import os
 import json
-import requests
+import os
 import re
 import threading
 import time
 import urllib.parse
+
+import requests
+
+from . import ClientConstants as CC
+from . import (ClientDefaults, ClientNetworkingContexts,
+               ClientNetworkingDomain, ClientNetworkingJobs,
+               ClientParsing, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable
 
 VALIDITY_VALID = 0
 VALIDITY_UNTESTED = 1
@@ -1771,4 +1769,3 @@ class LoginStep( HydrusSerialisable.SerialisableBaseNamed ):
         
     
 HydrusSerialisable.SERIALISABLE_TYPES_TO_OBJECT_TYPES[ HydrusSerialisable.SERIALISABLE_TYPE_LOGIN_STEP ] = LoginStep
-

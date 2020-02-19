@@ -1,12 +1,14 @@
+import os
+import threading
+import time
+import unittest
+
 from . import ClientConstants as CC
 from . import ClientThreading
 from . import HydrusConstants as HC
 from . import HydrusExceptions
 from . import HydrusGlobals as HG
-import os
-import threading
-import time
-import unittest
+
 
 def do_read_job( rwlock, result_list, name ):
     
@@ -224,6 +226,3 @@ class TestFileRWLock( unittest.TestCase ):
                 self.assertTrue( b.startswith( 'end write' ) )
                 
                 self.assertEqual( a[-2:], b[-2:] )
-                
-            
-        

@@ -1,29 +1,22 @@
-from . import ClientAPI
-from . import ClientConstants as CC
-from . import ClientGUIAPI
-from . import ClientGUIAsync
-from . import ClientGUICommon
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIListCtrl
-from . import ClientGUIScrolledPanelsReview
-from . import ClientGUITopLevelWindows
-from . import ClientPaths
-from . import ClientThreading
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusNATPunch
-from . import HydrusNetwork
-from . import HydrusPaths
 import os
 import time
-from . import QtPorting as QP
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientAPI
+from . import ClientConstants as CC
+from . import (ClientGUIAPI, ClientGUIAsync, ClientGUICommon,
+               ClientGUIDialogs, ClientGUIDialogsQuick, ClientGUIListCtrl,
+               ClientGUIScrolledPanelsReview, ClientGUITopLevelWindows,
+               ClientPaths, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusNATPunch, HydrusNetwork, HydrusPaths
 from . import QtPorting as QP
+
 
 class IPFSDaemonStatusAndInteractionPanel( ClientGUICommon.StaticBox ):
     
@@ -2208,7 +2201,3 @@ class ReviewServicePanel( QW.QWidget ):
                     
                 
                 HG.client_controller.CallToThread( do_it )
-                
-            
-        
-    

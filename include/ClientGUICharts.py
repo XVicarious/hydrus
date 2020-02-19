@@ -70,4 +70,3 @@ try:
 except:
     
     QT_CHARTS_OK = False
-    

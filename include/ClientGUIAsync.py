@@ -1,16 +1,18 @@
-from . import ClientData
-from . import ClientConstants as CC
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusText
 import threading
 import traceback
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import ClientData
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusText
 from . import QtPorting as QP
+
 
 class AsyncQtUpdater( object ):
     
@@ -210,7 +212,3 @@ class FastThreadToGUIUpdater( object ):
             elif not self._callafter_waiting:
                 
                 QP.CallAfter( self.QtDoIt )
-                
-            
-        
-    

@@ -1,20 +1,16 @@
-from . import ClientConstants as CC
-from . import ClientDownloading
-from . import ClientImporting
-from . import ClientImportOptions
-from . import ClientImportFileSeeds
-from . import ClientImportGallerySeeds
-from . import ClientNetworkingJobs
-from . import ClientParsing
-from . import ClientTags
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusSerialisable
 import threading
 import time
+
+from . import ClientConstants as CC
+from . import (ClientDownloading, ClientImportFileSeeds,
+               ClientImportGallerySeeds, ClientImporting, ClientImportOptions,
+               ClientNetworkingJobs, ClientParsing, ClientTags)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable
+
 
 class MultipleWatcherImport( HydrusSerialisable.SerialisableBase ):
     

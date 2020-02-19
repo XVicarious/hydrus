@@ -1,9 +1,11 @@
-from . import HydrusConstants as HC
-from . import HydrusData
 import os
 import sys
 import threading
 import time
+
+from . import HydrusConstants as HC
+from . import HydrusData
+
 
 class HydrusLogger( object ):
     
@@ -157,6 +159,3 @@ class HydrusLogger( object ):
                 
             
             self._log_file.write( message )
-            
-        
-    

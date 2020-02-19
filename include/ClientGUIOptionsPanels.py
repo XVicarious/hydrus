@@ -1,20 +1,19 @@
-from . import ClientConstants as CC
-from . import ClientCaches
-from . import ClientDefaults
-from . import ClientGUICommon
-from . import ClientGUIDialogs
-from . import ClientGUIFunctions
-from . import ClientImporting
-from . import ClientTags
 import collections
+import os
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientCaches
+from . import ClientConstants as CC
+from . import (ClientDefaults, ClientGUICommon, ClientGUIDialogs,
+               ClientGUIFunctions, ClientImporting, ClientTags)
 from . import HydrusConstants as HC
 from . import HydrusData
-import os
 from . import HydrusGlobals as HG
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
 from . import QtPorting as QP
+
 
 class OptionsPanel( QW.QWidget ):
     
@@ -240,5 +239,3 @@ class OptionsPanelMimes( OptionsPanel ):
         self._UpdateMimeGroupCheckboxes()
         
         self._DoInitialHideShow()
-        
-    

@@ -1,8 +1,9 @@
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
 import os
+
 from qtpy import QtWidgets as QW
+
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
 
 STYLESHEET_DIR = os.path.join( HC.BASE_DIR, 'static', 'qss' )
 
@@ -109,4 +110,3 @@ def SetStylesheetFromPath( filename ):
         
     
     SetStyleSheet( qss )
-    

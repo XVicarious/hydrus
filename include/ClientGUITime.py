@@ -1,16 +1,16 @@
-from . import ClientConstants as CC
-from . import ClientGUICommon
-from . import ClientGUIScrolledPanels
-from . import ClientGUITopLevelWindows
-from . import ClientImporting
-from . import ClientImportOptions
-from . import HydrusData
-from . import HydrusGlobals as HG
 import os
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientGUICommon, ClientGUIScrolledPanels,
+               ClientGUITopLevelWindows, ClientImporting,
+               ClientImportOptions, HydrusData)
+from . import HydrusGlobals as HG
 from . import QtPorting as QP
+
 
 class EditCheckerOptions( ClientGUIScrolledPanels.EditPanel ):
     
@@ -574,5 +574,3 @@ class VelocityCtrl( QW.QWidget ):
         self._num.setValue( num )
         
         self._times.SetValue( time_delta )
-        
-    

@@ -1,5 +1,9 @@
 import os
+import sqlite3
 import sys
+import traceback
+
+import yaml
 
 # dirs
 
@@ -61,9 +65,6 @@ LICENSE_PATH = os.path.join( BASE_DIR, 'license.txt' )
 
 #
 
-import sqlite3
-import traceback
-import yaml
 
 options = {}
 

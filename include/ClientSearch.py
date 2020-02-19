@@ -1,16 +1,14 @@
 import calendar
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientTags
 import datetime
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusSerialisable
-from . import HydrusTags
 import re
 import time
+
+from . import ClientConstants as CC
+from . import ClientData, ClientTags
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable, HydrusTags
 
 IGNORED_TAG_SEARCH_CHARACTERS = '[](){}"\''
 IGNORED_TAG_SEARCH_CHARACTERS_UNICODE_TRANSLATE = { ord( char ) : None for char in IGNORED_TAG_SEARCH_CHARACTERS }

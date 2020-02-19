@@ -1,18 +1,17 @@
-from . import ClientConstants as CC
-from . import ClientDefaults
-from . import ClientDownloading
-from . import ClientDuplicates
-from . import ClientImporting
-from . import HydrusConstants as HC
-from . import HydrusGlobals as HG
-from . import HydrusData
-from . import HydrusPaths
-from . import HydrusSerialisable
-from . import HydrusTags
 import os
 import threading
+
 from qtpy import QtGui as QG
+
+from . import ClientConstants as CC
+from . import (ClientDefaults, ClientDownloading,
+               ClientDuplicates, ClientImporting)
+from . import HydrusConstants as HC
+from . import HydrusData
+from . import HydrusGlobals as HG
+from . import HydrusPaths, HydrusSerialisable, HydrusTags
 from . import QtPorting as QP
+
 
 class ClientOptions( HydrusSerialisable.SerialisableBase ):
     

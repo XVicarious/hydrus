@@ -1,17 +1,17 @@
-from . import ClientSearch
-from . import ClientServices
-from . import HydrusConstants as HC
-from . import HydrusExceptions
+import collections
 import random
 import threading
-from . import HydrusData
-from . import ClientData
-from . import ClientConstants as CC
-from . import HydrusGlobals as HG
-import collections
-from . import HydrusTags
 import traceback
+
 from qtpy import QtGui as QG
+
+from . import ClientConstants as CC
+from . import ClientData, ClientSearch, ClientServices
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusTags
+
 
 # now let's fill out grandparents
 def BuildServiceKeysToChildrenToParents( service_keys_to_simple_children_to_parents ):
@@ -1335,6 +1335,3 @@ class UndoManager( object ):
             self._controller.WriteSynchronous( action, *args, **kwargs )
             
             self._controller.pub( 'notify_new_undo' )
-            
-        
-    

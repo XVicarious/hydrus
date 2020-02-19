@@ -1,13 +1,6 @@
 import gc
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusThreading
 import os
-import psutil
 import re
-import send2trash
 import shlex
 import shutil
 import stat
@@ -16,6 +9,14 @@ import sys
 import tempfile
 import threading
 import traceback
+
+import psutil
+import send2trash
+
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusThreading
 
 TEMP_PATH_LOCK = threading.Lock()
 IN_USE_TEMP_PATHS = set()
@@ -936,4 +937,3 @@ def SanitizeFilename( filename ):
         
     
     return filename
-    

@@ -1,9 +1,10 @@
-from . import ClientGUIScrolledPanelsButtonQuestions
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUITopLevelWindows
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
 from qtpy import QtWidgets as QW
+
+from . import (ClientGUIScrolledPanelsButtonQuestions,
+               ClientGUIScrolledPanelsEdit, ClientGUITopLevelWindows,
+               HydrusExceptions)
+from . import HydrusGlobals as HG
+
 
 def GetDeleteFilesJobs( win, media, default_reason, suggested_file_service_key = None ):
     
@@ -131,6 +132,3 @@ def SelectFromListButtons( win, title, choice_tuples ):
         else:
             
             raise HydrusExceptions.CancelledException()
-            
-        
-    

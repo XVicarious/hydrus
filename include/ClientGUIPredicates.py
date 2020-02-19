@@ -1,26 +1,23 @@
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientGUICommon
-from . import ClientGUIControls
-from . import ClientGUIFunctions
-from . import ClientGUIOptionsPanels
-from . import ClientGUIScrolledPanels
-from . import ClientGUIShortcuts
-from . import ClientGUITime
-from . import ClientRatings
-from . import ClientSearch
 import datetime
+import os
+import re
+import string
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientData, ClientGUICommon, ClientGUIControls,
+               ClientGUIFunctions, ClientGUIOptionsPanels,
+               ClientGUIScrolledPanels, ClientGUIShortcuts, ClientGUITime,
+               ClientRatings, ClientSearch)
 from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
 from . import HydrusText
-import os
-import re
-import string
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
 from . import QtPorting as QP
+
 
 class InputFileSystemPredicate( ClientGUIScrolledPanels.EditPanel ):
     
@@ -1662,5 +1659,3 @@ class PanelPredicateSystemWidth( PanelPredicateSystem ):
         info = ( self._sign.GetStringSelection(), self._width.value())
         
         return info
-        
-    

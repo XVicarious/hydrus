@@ -1,38 +1,25 @@
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientDB
-from . import ClientDefaults
-from . import ClientDownloading
-from . import ClientExporting
-from . import ClientFiles
-from . import ClientGUIManagement
-from . import ClientGUIPages
-from . import ClientImporting
-from . import ClientImportLocal
-from . import ClientImportOptions
-from . import ClientImportFileSeeds
-from . import ClientRatings
-from . import ClientSearch
-from . import ClientServices
-from . import ClientTags
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusVideoHandling
-from . import HydrusGlobals as HG
-from . import HydrusNetwork
-from . import HydrusSerialisable
 import itertools
 import os
-from . import ServerDB
 import shutil
 import sqlite3
 import stat
-from . import TestController
-import time
 import threading
+import time
 import unittest
+
+from . import ClientConstants as CC
+from . import (ClientData, ClientDB, ClientDefaults, ClientDownloading,
+               ClientExporting, ClientFiles, ClientGUIManagement,
+               ClientGUIPages, ClientImportFileSeeds, ClientImporting,
+               ClientImportLocal, ClientImportOptions, ClientRatings,
+               ClientSearch, ClientServices, ClientTags)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import (HydrusNetwork, HydrusSerialisable,
+               HydrusVideoHandling, ServerDB, TestController)
+
 
 class TestClientDBDuplicates( unittest.TestCase ):
     
@@ -1057,5 +1044,3 @@ class TestClientDBDuplicates( unittest.TestCase ):
         self._test_expand_alt()
         
         self._test_dissolve()
-        
-    

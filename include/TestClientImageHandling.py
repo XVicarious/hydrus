@@ -1,9 +1,11 @@
-from . import ClientConstants as CC
-from . import ClientImageHandling
 import collections
-from . import HydrusConstants as HC
 import os
 import unittest
+
+from . import ClientConstants as CC
+from . import ClientImageHandling
+from . import HydrusConstants as HC
+
 
 class TestImageHandling( unittest.TestCase ):
     
@@ -20,4 +22,3 @@ class TestImageHandling( unittest.TestCase ):
         phashes = ClientImageHandling.DiscardBlankPerceptualHashes( { b'\xb4M\xc7\xb2M\xcb8\x1c', CC.BLANK_PHASH } )
         
         self.assertEqual( phashes, set( [ b'\xb4M\xc7\xb2M\xcb8\x1c' ] ) )
-        

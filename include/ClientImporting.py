@@ -1,29 +1,19 @@
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientDefaults
-from . import ClientDownloading
-from . import ClientFiles
-from . import ClientImportOptions
-from . import ClientImportFileSeeds
-from . import ClientImportGallerySeeds
-from . import ClientNetworkingContexts
-from . import ClientNetworkingJobs
-from . import ClientParsing
-from . import ClientPaths
-from . import ClientThreading
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusFileHandling
-from . import HydrusGlobals as HG
-from . import HydrusPaths
-from . import HydrusSerialisable
-from . import HydrusThreading
 import os
 import random
 import threading
 import time
 import traceback
+
+from . import ClientConstants as CC
+from . import (ClientData, ClientDefaults, ClientDownloading,
+               ClientFiles, ClientImportFileSeeds,
+               ClientImportGallerySeeds, ClientImportOptions,
+               ClientNetworkingContexts, ClientNetworkingJobs,
+               ClientParsing, ClientPaths, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions, HydrusFileHandling
+from . import HydrusGlobals as HG
+from . import HydrusPaths, HydrusSerialisable, HydrusThreading
 
 CHECKER_STATUS_OK = 0
 CHECKER_STATUS_DEAD = 1
@@ -392,5 +382,3 @@ class NetworkJobPresentationContext( object ):
     def __exit__( self, exc_type, exc_val, exc_tb ):
         
         self._exit_call()
-        
-    

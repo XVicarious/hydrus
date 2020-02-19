@@ -1,42 +1,27 @@
-from . import HydrusConstants as HC
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientDragDrop
-from . import ClientFiles
-from . import ClientGUICanvas
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsManage
-from . import ClientGUIDialogsQuick
-from . import ClientGUIDuplicates
-from . import ClientGUIExport
-from . import ClientGUIFunctions
-from . import ClientGUIMedia
-from . import ClientGUIMenus
-from . import ClientGUIScrolledPanels
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUIScrolledPanelsManagement
-from . import ClientGUIShortcuts
-from . import ClientGUITags
-from . import ClientGUITopLevelWindows
-from . import ClientMedia
-from . import ClientPaths
-from . import ClientSearch
-from . import ClientTags
-from . import HydrusExceptions
-from . import HydrusNetwork
-from . import HydrusPaths
 import itertools
 import os
 import random
 import time
 import traceback
-from . import QtPorting as QP
-from . import HydrusData
-from . import HydrusGlobals as HG
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientData, ClientDragDrop, ClientFiles, ClientGUICanvas,
+               ClientGUIDialogs, ClientGUIDialogsManage, ClientGUIDialogsQuick,
+               ClientGUIDuplicates, ClientGUIExport, ClientGUIFunctions,
+               ClientGUIMedia, ClientGUIMenus, ClientGUIScrolledPanels,
+               ClientGUIScrolledPanelsEdit, ClientGUIScrolledPanelsManagement,
+               ClientGUIShortcuts, ClientGUITags, ClientGUITopLevelWindows,
+               ClientMedia, ClientPaths, ClientSearch, ClientTags)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusNetwork, HydrusPaths
 from . import QtPorting as QP
+
 
 class MediaPanel( ClientMedia.ListeningMediaList, QW.QScrollArea ):
     
@@ -4903,5 +4888,3 @@ class ThumbnailMediaSingleton( Thumbnail, ClientMedia.MediaSingleton ):
         
         ClientMedia.MediaSingleton.__init__( self, media_result )
         Thumbnail.__init__( self, file_service_key )
-        
-    

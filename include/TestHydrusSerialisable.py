@@ -1,26 +1,18 @@
-from . import ClientCaches
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientDefaults
-from . import ClientDownloading
-from . import ClientDuplicates
-from . import ClientGUIShortcuts
-from . import ClientImporting
-from . import ClientImportOptions
-from . import ClientImportSubscriptions
-from . import ClientMedia
-from . import ClientNetworkingDomain
-from . import ClientRatings
-from . import ClientSearch
-from . import ClientTags
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusNetwork
-from . import HydrusSerialisable
-from . import TestController as TC
 import os
 import unittest
+
 from qtpy import QtCore as QC
+
+from . import ClientCaches
+from . import ClientConstants as CC
+from . import (ClientData, ClientDefaults, ClientDownloading, ClientDuplicates,
+               ClientGUIShortcuts, ClientImporting, ClientImportOptions,
+               ClientImportSubscriptions, ClientMedia, ClientNetworkingDomain,
+               ClientRatings, ClientSearch, ClientTags)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusNetwork, HydrusSerialisable
+from . import TestController as TC
+
 
 class TestSerialisables( unittest.TestCase ):
     
@@ -660,5 +652,3 @@ class TestSerialisables( unittest.TestCase ):
         self._dump_and_load_and_test( tag_filter, test )
         
         self.assertEqual( tag_filter.Filter( tags ), { 'title:test title', 'series:neon genesis evangelion', 'series:kill la kill', 'blue eyes' } )
-        
-    

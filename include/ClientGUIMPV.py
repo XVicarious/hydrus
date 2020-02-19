@@ -1,18 +1,18 @@
+import locale
+import os
+import traceback
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientConstants as CC
-from . import ClientGUICommon
-from . import ClientGUIMedia
-from . import ClientGUIMediaControls
-from . import ClientGUIShortcuts
+from . import (ClientGUICommon, ClientGUIMedia,
+               ClientGUIMediaControls, ClientGUIShortcuts)
 from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
 from . import HydrusPaths
-import os
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
-import locale
-import traceback
 
 mpv_failed_reason = 'MPV seems ok!'
 
@@ -405,4 +405,3 @@ class mpvWidget( QW.QWidget ):
     def UpdateAudioVolume( self ):
         
         self._player.volume = self._GetCorrectCurrentVolume()
-        

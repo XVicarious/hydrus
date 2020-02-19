@@ -1,46 +1,26 @@
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import ClientCaches
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientDuplicates
-from . import ClientGUICommon
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsManage
-from . import ClientGUIDialogsQuick
-from . import ClientGUIFunctions
-from . import ClientGUIHoverFrames
-from . import ClientGUIMedia
-from . import ClientGUIMediaControls
-from . import ClientGUIMenus
-from . import ClientGUIMPV
-from . import ClientGUIScrolledPanels
-from . import ClientGUIScrolledPanelsButtonQuestions
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUIScrolledPanelsManagement
-from . import ClientGUIShortcuts
-from . import ClientGUITags
-from . import ClientGUITopLevelWindows
-from . import ClientMedia
-from . import ClientPaths
-from . import ClientRatings
-from . import ClientRendering
-from . import ClientSearch
-from . import ClientTags
-from . import ClientThreading
 import gc
-from . import HydrusImageHandling
-from . import HydrusPaths
-from . import HydrusSerialisable
-from . import HydrusTags
 import os
 import time
-from . import QtPorting as QP
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientCaches
+from . import ClientConstants as CC
+from . import (ClientData, ClientDuplicates, ClientGUICommon, ClientGUIDialogs,
+               ClientGUIDialogsManage, ClientGUIDialogsQuick,
+               ClientGUIFunctions, ClientGUIHoverFrames, ClientGUIMedia,
+               ClientGUIMediaControls, ClientGUIMenus, ClientGUIMPV,
+               ClientGUIScrolledPanels, ClientGUIScrolledPanelsButtonQuestions,
+               ClientGUIScrolledPanelsEdit, ClientGUIScrolledPanelsManagement,
+               ClientGUIShortcuts, ClientGUITags, ClientGUITopLevelWindows,
+               ClientMedia, ClientPaths, ClientRatings, ClientRendering,
+               ClientSearch, ClientTags, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusImageHandling, HydrusPaths, HydrusSerialisable, HydrusTags
 from . import QtPorting as QP
 
 OPEN_EXTERNALLY_BUTTON_SIZE = ( 200, 45 )
@@ -6224,6 +6204,3 @@ class StaticImage( QW.QWidget ):
             HG.client_controller.gui.UnregisterAnimationUpdateWindow( self )
             
             raise
-            
-        
-    

@@ -1,12 +1,14 @@
+import os
+
+from qtpy import QtWidgets as QW
+
 from . import ClientConstants as CC
-from . import ClientGUICommon
-from . import ClientGUITopLevelWindows
+from . import ClientGUICommon, ClientGUITopLevelWindows
 from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
-import os
-from qtpy import QtWidgets as QW
 from . import QtPorting as QP
+
 
 class ShowKeys( ClientGUITopLevelWindows.Frame ):
     
@@ -75,8 +77,3 @@ class ShowKeys( ClientGUITopLevelWindows.Frame ):
                 with open( path, 'w', encoding = 'utf-8' ) as f:
                     
                     f.write( self._text )
-                    
-                
-            
-        
-    

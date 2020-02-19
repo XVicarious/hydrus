@@ -1,59 +1,35 @@
-from . import ClientCaches
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientDefaults
-from . import ClientDownloading
-from . import ClientGUIACDropdown
-from . import ClientGUICommon
-from . import ClientGUIControls
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIFunctions
-from . import ClientGUIImport
-from . import ClientGUIListBoxes
-from . import ClientGUIListCtrl
-from . import ClientGUIMediaControls
-from . import ClientGUIPanels
-from . import ClientGUIPredicates
-from . import ClientGUIScrolledPanels
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUIScrolledPanelsReview
-from . import ClientGUISerialisable
-from . import ClientGUIShortcuts
-from . import ClientGUITagSuggestions
-from . import ClientGUITopLevelWindows
-from . import ClientNetworkingContexts
-from . import ClientNetworkingJobs
-from . import ClientNetworkingSessions
-from . import ClientImporting
-from . import ClientMedia
-from . import ClientRatings
-from . import ClientSerialisable
-from . import ClientServices
-from . import ClientGUIStyle
-from . import ClientGUITime
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusNetwork
-from . import HydrusNetworking
-from . import HydrusPaths
-from . import HydrusSerialisable
-from . import HydrusTagArchive
-from . import HydrusTags
-from . import HydrusText
 import itertools
 import os
 import random
 import traceback
 import urllib.parse
-from . import QtPorting as QP
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientCaches
+from . import ClientConstants as CC
+from . import (ClientData, ClientDefaults, ClientDownloading,
+               ClientGUIACDropdown, ClientGUICommon, ClientGUIControls,
+               ClientGUIDialogs, ClientGUIDialogsQuick, ClientGUIFunctions,
+               ClientGUIImport, ClientGUIListBoxes, ClientGUIListCtrl,
+               ClientGUIMediaControls, ClientGUIPanels, ClientGUIPredicates,
+               ClientGUIScrolledPanels, ClientGUIScrolledPanelsEdit,
+               ClientGUIScrolledPanelsReview, ClientGUISerialisable,
+               ClientGUIShortcuts, ClientGUIStyle, ClientGUITagSuggestions,
+               ClientGUITime, ClientGUITopLevelWindows, ClientImporting,
+               ClientMedia, ClientNetworkingContexts, ClientNetworkingJobs,
+               ClientNetworkingSessions, ClientRatings, ClientSerialisable,
+               ClientServices)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import (HydrusNetwork, HydrusNetworking, HydrusPaths,
+               HydrusSerialisable, HydrusTagArchive, HydrusTags, HydrusText)
 from . import QtPorting as QP
+
 
 class ManageAccountTypesPanel( ClientGUIScrolledPanels.ManagePanel ):
     
@@ -5545,5 +5521,3 @@ class RepairFileSystemPanel( ClientGUIScrolledPanels.ManagePanel ):
             
         
         HG.client_controller.WriteSynchronous( 'repair_client_files', correct_rows )
-        
-    

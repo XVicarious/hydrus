@@ -218,4 +218,3 @@ HG.shutdown_complete = True
 if HG.restart:
     
     HydrusData.RestartProcess()
-    

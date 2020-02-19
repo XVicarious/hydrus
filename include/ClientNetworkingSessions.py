@@ -1,12 +1,12 @@
 import pickle
-from . import ClientConstants as CC
-from . import ClientNetworkingContexts
-from . import ClientNetworkingDomain
-from . import HydrusData
-from . import HydrusSerialisable
-from . import HydrusGlobals as HG
-import requests
 import threading
+
+import requests
+
+from . import ClientConstants as CC
+from . import ClientNetworkingContexts, ClientNetworkingDomain, HydrusData
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable
 
 try:
     

@@ -1,14 +1,14 @@
-from . import ClientConstants as CC
-from . import ClientImportFileSeeds
-from . import ClientImportOptions
-from . import ClientTags
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
 import os
 import unittest
+
 from mock import patch
+
+from . import ClientConstants as CC
+from . import ClientImportFileSeeds, ClientImportOptions, ClientTags
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+
 
 class TestCheckerOptions( unittest.TestCase ):
     
@@ -614,5 +614,3 @@ class TestServiceTagImportOptions( unittest.TestCase ):
         service_tag_import_options = ClientImportOptions.ServiceTagImportOptions( get_tags = True, only_add_existing_tags = True, only_add_existing_tags_filter = only_unnamespaced )
         
         self.assertEqual( service_tag_import_options.GetTags( example_service_key, CC.STATUS_SUCCESSFUL_AND_NEW, True, example_hash, some_tags ), { 'bodysuit', 'character:samus aran', 'series:metroid' } )
-        
-    

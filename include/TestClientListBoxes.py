@@ -1,18 +1,20 @@
-from . import ClientConstants as CC
-from . import ClientDefaults
-from . import ClientGUIListBoxes
 import collections
-from . import HydrusConstants as HC
 import os
 import random
-from . import TestController
 import time
 import unittest
-from . import HydrusGlobals as HG
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import ClientDefaults, ClientGUIListBoxes
+from . import HydrusConstants as HC
+from . import HydrusGlobals as HG
 from . import QtPorting as QP
+from . import TestController
+
 
 def DoClick( click, panel, do_delayed_ok_afterwards = False ):
     
@@ -201,5 +203,3 @@ class TestListBoxes( unittest.TestCase ):
             
         
         HG.test_controller.CallBlockingToQt( HG.test_controller.win, qt_code )
-        
-    

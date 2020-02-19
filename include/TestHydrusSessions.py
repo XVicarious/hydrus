@@ -1,14 +1,14 @@
-from . import ClientConstants as CC
 import collections
 import hashlib
-from . import HydrusConstants as HC
-from . import HydrusExceptions
-from . import HydrusNetwork
-from . import HydrusSessions
 import os
 import unittest
-from . import HydrusData
+
+from . import ClientConstants as CC
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
+from . import HydrusNetwork, HydrusSessions
+
 
 class TestSessions( unittest.TestCase ):
     
@@ -192,4 +192,3 @@ class TestSessions( unittest.TestCase ):
         read_account = session_manager.GetAccountFromAccessKey( service_key, access_key_2 )
         
         self.assertIs( read_account, new_obj_account_2 )
-        

@@ -1,24 +1,22 @@
-from . import ClientConstants as CC
-from . import ClientDefaults
-from . import ClientDownloading
-from . import ClientThreading
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusPaths
-from . import HydrusSerialisable
-from . import HydrusTags
-import threading
-import traceback
 import os
 import sqlite3
 import sys
+import threading
 import time
+import traceback
+
 import yaml
 from qtpy import QtGui as QG
+
+from . import ClientConstants as CC
+from . import ClientDefaults, ClientDownloading, ClientThreading
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusPaths, HydrusSerialisable, HydrusTags
 from . import QtPorting as QP
+
 
 def AddPaddingToDimensions( dimensions, padding ):
     

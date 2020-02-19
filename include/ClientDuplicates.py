@@ -1,11 +1,12 @@
+import collections
+
 from . import ClientConstants as CC
 from . import ClientTags
-import collections
 from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
 from . import HydrusSerialisable
+
 
 class DuplicateActionOptions( HydrusSerialisable.SerialisableBase ):
     

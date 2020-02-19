@@ -1,16 +1,14 @@
 import collections
-from . import ClientCaches
-from . import ClientConstants as CC
-from . import ClientManagers
-from . import ClientMedia
-from . import ClientSearch
-from . import ClientTags
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
 import os
 import unittest
+
+from . import ClientCaches
+from . import ClientConstants as CC
+from . import ClientManagers, ClientMedia, ClientSearch, ClientTags
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+
 
 class TestMergeTagsManagers( unittest.TestCase ):
     
@@ -957,5 +955,3 @@ class TestTagSiblings( unittest.TestCase ):
         self.assertEqual( self._tag_siblings_manager.CollapseTagsToCount( self._first_key, { 'tree_1' : 10 } ), { 'tree_6' : 10 } )
         self.assertEqual( self._tag_siblings_manager.CollapseTagsToCount( self._first_key, { 'tree_1' : 10, 'tree_3' : 5, 'tree_5' : 20 } ), { 'tree_6' : 35 } )
         self.assertEqual( self._tag_siblings_manager.CollapseTagsToCount( self._first_key, { 'tree_1' : 10, 'tree_2' : 3, 'tree_3' : 5, 'tree_4' : 2, 'tree_5' : 20, 'tree_6' : 30 } ), { 'tree_6' : 70 } )
-        
-    

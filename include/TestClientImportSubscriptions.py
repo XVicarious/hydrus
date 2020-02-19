@@ -1,24 +1,20 @@
-from . import ClientConstants as CC
-from . import ClientDefaults
-from . import ClientImportSubscriptions
-from . import ClientNetworking
-from . import ClientNetworkingBandwidth
-from . import ClientNetworkingDomain
-from . import ClientNetworkingLogin
-from . import ClientNetworkingSessions
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusNetworking
 import os
-from . import TestController
 import threading
 import time
 import unittest
-from . import HydrusGlobals as HG
-from httmock import all_requests, urlmatch, HTTMock, response
+
+from httmock import HTTMock, all_requests, response, urlmatch
 from mock import patch
+
+from . import ClientConstants as CC
+from . import (ClientDefaults, ClientImportSubscriptions, ClientNetworking,
+               ClientNetworkingBandwidth, ClientNetworkingDomain,
+               ClientNetworkingLogin, ClientNetworkingSessions)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusNetworking, TestController
 
 MISSING_RESPONSE = '404, bad result'
 ERROR_RESPONSE = '500, it done broke'
@@ -102,4 +98,3 @@ class TestSubscription( unittest.TestCase ):
         # a user cancel on catch-up
         
         pass
-        

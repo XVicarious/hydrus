@@ -1,9 +1,11 @@
+import os
+import webbrowser
+
 from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
 from . import HydrusPaths
-import os
-import webbrowser
+
 
 def DeletePath( path, always_delete_fully = False ):
     
@@ -31,5 +33,3 @@ def LaunchURLInWebBrowser( url ):
     else:
         
         HydrusPaths.LaunchFile( url, launch_path = web_browser_path )
-        
-    

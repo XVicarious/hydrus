@@ -1,20 +1,18 @@
-from . import ClientConstants as CC
-from . import ClientImporting
-from . import ClientNetworkingDomain
-from . import ClientParsing
-from . import ClientTags
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusSerialisable
-from . import HydrusTags
 import itertools
 import os
 import threading
 import time
 import traceback
+
+from . import ClientConstants as CC
+from . import (ClientImporting, ClientNetworkingDomain,
+               ClientParsing, ClientTags)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable, HydrusTags
+
 
 def GenerateGallerySeedLogStatus( statuses_to_counts ):
     

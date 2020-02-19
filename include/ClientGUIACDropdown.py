@@ -1,30 +1,23 @@
+import collections
+import itertools
+import os
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientCaches
 from . import ClientConstants as CC
-from . import ClientData
-from . import ClientGUICommon
-from . import ClientGUIFunctions
-from . import ClientGUIListBoxes
-from . import ClientGUIMenus
-from . import ClientGUIShortcuts
-from . import ClientSearch
-from . import ClientTags
-from . import ClientThreading
-from . import ClientGUIScrolledPanels
-from . import ClientGUITopLevelWindows
-import collections
+from . import (ClientData, ClientGUICommon, ClientGUIFunctions,
+               ClientGUIListBoxes, ClientGUIMenus, ClientGUIScrolledPanels,
+               ClientGUIShortcuts, ClientGUITopLevelWindows, ClientSearch,
+               ClientTags, ClientThreading)
 from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
-from . import HydrusTags
-from . import HydrusText
-import itertools
-from . import LogicExpressionQueryParser
-import os
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
+from . import HydrusTags, HydrusText, LogicExpressionQueryParser
 from . import QtPorting as QP
+
 
 def AppendLoadingPredicate( predicates ):
     
@@ -2205,5 +2198,3 @@ class EditAdvancedORPredicates( ClientGUIScrolledPanels.EditPanel ):
             
         
         return self._current_predicates
-        
-    

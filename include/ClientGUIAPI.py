@@ -1,26 +1,22 @@
-from . import ClientAPI
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientGUICommon
-from . import ClientGUIControls
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIFunctions
-from . import ClientGUIListCtrl
-from . import ClientGUIScrolledPanels
-from . import ClientGUITags
-from . import ClientGUITopLevelWindows
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
 import os
 import time
 import traceback
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientAPI
+from . import ClientConstants as CC
+from . import (ClientData, ClientGUICommon, ClientGUIControls,
+               ClientGUIDialogs, ClientGUIDialogsQuick, ClientGUIFunctions,
+               ClientGUIListCtrl, ClientGUIScrolledPanels, ClientGUITags,
+               ClientGUITopLevelWindows)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
 from . import QtPorting as QP
+
 
 class CaptureAPIAccessPermissionsRequestPanel( ClientGUIScrolledPanels.ReviewPanel ):
     
@@ -166,5 +162,3 @@ class EditAPIPermissionsPanel( ClientGUIScrolledPanels.EditPanel ):
         api_permissions = self._GetValue()
         
         return api_permissions
-        
-    

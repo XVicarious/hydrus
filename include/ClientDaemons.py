@@ -1,20 +1,15 @@
-from . import ClientImporting
-from . import ClientImportOptions
-from . import ClientImportFileSeeds
-from . import ClientPaths
-from . import ClientThreading
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusNATPunch
-from . import HydrusPaths
-from . import HydrusSerialisable
-from . import HydrusThreading
-from . import ClientConstants as CC
 import random
 import threading
 import time
+
+from . import ClientConstants as CC
+from . import (ClientImportFileSeeds, ClientImporting,
+               ClientImportOptions, ClientPaths, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusNATPunch, HydrusPaths, HydrusSerialisable, HydrusThreading
+
 
 def DAEMONCheckExportFolders():
     
@@ -163,6 +158,3 @@ def DAEMONSynchroniseRepositories( controller ):
                 
             
             time.sleep( 1 )
-            
-        
-    

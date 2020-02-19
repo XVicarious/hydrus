@@ -1,35 +1,27 @@
-from . import ClientConstants as CC
-from . import ClientAPI
-from . import ClientLocalServer
-from . import ClientMedia
-from . import ClientRatings
-from . import ClientServices
-from . import ClientTags
 import hashlib
 import http.client
-from . import HydrusConstants as HC
-from . import HydrusEncryption
-from . import HydrusNetwork
-from . import HydrusPaths
-from . import HydrusServer
-from . import HydrusServerResources
-from . import HydrusText
 import json
 import os
 import random
-from . import ServerFiles
-from . import ServerServer
 import ssl
-from . import TestController
 import time
 import unittest
 import urllib
+
+import twisted.internet.ssl
 from twisted.internet import reactor
 #from twisted.internet.endpoints import TCP4ClientEndpoint, connectProtocol
 from twisted.internet.defer import deferredGenerator, waitForDeferred
-import twisted.internet.ssl
-from . import HydrusData
+
+from . import ClientAPI
+from . import ClientConstants as CC
+from . import (ClientLocalServer, ClientMedia,
+               ClientRatings, ClientServices, ClientTags)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusEncryption
 from . import HydrusGlobals as HG
+from . import (HydrusNetwork, HydrusPaths, HydrusServer, HydrusServerResources,
+               HydrusText, ServerFiles, ServerServer, TestController)
 
 with open( os.path.join( HC.STATIC_DIR, 'hydrus.png' ), 'rb' ) as f:
     

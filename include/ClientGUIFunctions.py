@@ -1,13 +1,15 @@
 import collections
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientTags
 from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
 from . import QtPorting as QP
+
 
 def ApplyContentApplicationCommandToMedia( parent, command, media ):
     
@@ -434,4 +436,3 @@ def WidgetOrAnyTLWChildHasFocus( window ):
         
     
     return False
-    

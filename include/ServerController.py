@@ -1,20 +1,19 @@
-from . import HydrusConstants as HC
-from . import HydrusController
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusNetworking
-from . import HydrusSessions
-from . import HydrusThreading
 import os
-from . import ServerDB
-from . import ServerServer
-import requests
 import sys
 import time
 import traceback
+
+import requests
+
 import twisted.internet.ssl
-from twisted.internet import threads, reactor, defer
+from twisted.internet import defer, reactor, threads
+
+from . import HydrusConstants as HC
+from . import HydrusController, HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import (HydrusNetworking, HydrusSessions,
+               HydrusThreading, ServerDB, ServerServer)
+
 
 def ProcessStartingAction( db_dir, action ):
     
@@ -494,6 +493,3 @@ class Controller( HydrusController.HydrusController ):
         for service in repositories:
             
             service.Sync()
-            
-        
-    

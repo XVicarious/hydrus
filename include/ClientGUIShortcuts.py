@@ -1,13 +1,14 @@
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientConstants as CC
-from . import ClientData
-from . import ClientGUIFunctions
+from . import ClientData, ClientGUIFunctions
 from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
 from . import HydrusSerialisable
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
+
 
 # ok, the problem here is that I get key codes that are converted, so if someone does shift+1 on a US keyboard, this ends up with Shift+! same with ctrl+alt+ to get accented characters
 # it isn't really a big deal since everything still lines up, but the QGuiApplicationPrivate::platformIntegration()->possibleKeys(e) to get some variant of 'yeah this is just !' seems unavailable for python
@@ -893,5 +894,3 @@ class ShortcutsManager( object ):
         self._RefreshShortcuts()
         
         HG.client_controller.pub( 'notify_new_shortcuts_gui' )
-        
-    

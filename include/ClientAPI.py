@@ -1,10 +1,9 @@
-from . import ClientTags
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusSerialisable
 import os
 import threading
+
+from . import ClientTags, HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable
 
 CLIENT_API_PERMISSION_ADD_URLS = 0
 CLIENT_API_PERMISSION_ADD_FILES = 1

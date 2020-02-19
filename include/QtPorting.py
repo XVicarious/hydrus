@@ -1,8 +1,19 @@
 #This file is licensed under the Do What the Fuck You Want To Public License aka WTFPL
 
+import math
 import os
+from collections import defaultdict
 
+# 
+import qtpy
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
 from . import HydrusConstants as HC
+from . import HydrusData
+from . import HydrusGlobals as HG
 
 # If not explicitely set, prefer PySide2 instead of the qtpy default which is PyQt5
 # It is important that this runs on startup *before* anything is imported from qtpy.
@@ -20,17 +31,7 @@ if not 'QT_API' in os.environ:
         pass
         
 
-from . import HydrusData
-from . import HydrusGlobals as HG
-from . import ClientConstants as CC
 
-# 
-import qtpy
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
-import math
-from collections import defaultdict
     
 if qtpy.PYQT5:
     

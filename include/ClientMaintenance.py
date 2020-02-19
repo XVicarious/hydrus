@@ -1,18 +1,16 @@
-from . import ClientConstants as CC
-from . import ClientThreading
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusFileHandling
-from . import HydrusGlobals as HG
-from . import HydrusImageHandling
-from . import HydrusNetworking
-from . import HydrusPaths
-from . import HydrusThreading
 import os
 import random
 import threading
 import time
+
+from . import ClientConstants as CC
+from . import ClientThreading
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions, HydrusFileHandling
+from . import HydrusGlobals as HG
+from . import (HydrusImageHandling, HydrusNetworking,
+               HydrusPaths, HydrusThreading)
+
 
 class GlobalMaintenanceJobInterface( object ):
     
@@ -112,4 +110,3 @@ class GlobalMaintenanceManager( object ):
     
     # something like files maintenance manager. it'll also run itself, always checking on jobs, and will catch 'runnow' events too
     # instead of storing in db, we'll store here in the object since small number of complicated jobs
-    

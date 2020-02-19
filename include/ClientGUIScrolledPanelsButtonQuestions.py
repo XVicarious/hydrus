@@ -1,15 +1,14 @@
-from . import ClientConstants as CC
-from . import ClientGUICommon
-from . import ClientGUIFunctions
-from . import ClientGUIScrolledPanels
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import ClientGUICommon, ClientGUIFunctions, ClientGUIScrolledPanels
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
 from . import QtPorting as QP
+
 
 class QuestionCommitInterstitialFilteringPanel( ClientGUIScrolledPanels.ResizingScrolledPanel ):
     
@@ -103,6 +102,3 @@ class QuestionYesNoPanel( ClientGUIScrolledPanels.ResizingScrolledPanel ):
         self.widget().setLayout( vbox )
         
         QP.CallAfter( self._yes.setFocus, QC.Qt.OtherFocusReason )
-        
-    
-

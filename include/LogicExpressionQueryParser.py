@@ -28,6 +28,7 @@ aaaaa_\(bbb ccc \(\)\) and not x
 
 import re
 
+
 #Generates tokens for the parser. Consumes the input string.
 #As opposed to most lexers it doesn't split on spaces.
 #In fact, it tries to avoid splitting when possible by only splitting on logical operators or parentheses.

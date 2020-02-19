@@ -2,20 +2,19 @@ import calendar
 import collections
 import datetime
 import http.client
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusSerialisable
 import json
-import psutil
 import socket
 import ssl
 import threading
 import time
 import urllib
 
+import psutil
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning
+
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions, HydrusSerialisable
 
 urllib3.disable_warnings( InsecureRequestWarning ) # stopping log-moaning when request sessions have verify = False
 

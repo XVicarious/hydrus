@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
-from include import QtPorting as QP
-from qtpy import QtWidgets as QW
-from qtpy import QtCore as QC
-
 import locale
+import sys
+import threading
+import traceback
 
-try: locale.setlocale( locale.LC_ALL, '' )
-except: pass
+from qtpy import QtCore as QC
+from qtpy import QtWidgets as QW
 
 from include import HydrusConstants as HC
 from include import HydrusData
 from include import HydrusGlobals as HG
+from include import QtPorting as QP
 from include import TestController
-import sys
-import threading
-import traceback
 from twisted.internet import reactor
+
+try: locale.setlocale( locale.LC_ALL, '' )
+except: pass
+
 
 if __name__ == '__main__':
     
@@ -88,4 +89,3 @@ if __name__ == '__main__':
         print( 'This was version ' + str( HC.SOFTWARE_VERSION ) )
         
         input()
-        

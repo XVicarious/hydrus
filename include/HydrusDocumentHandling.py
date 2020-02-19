@@ -1,8 +1,10 @@
-from . import HydrusConstants as HC
 #import PyPDF2
 import re
 import time
 import traceback
+
+from . import HydrusConstants as HC
+
 
 def GetNumWordsFromString( s ):
     
@@ -41,4 +43,3 @@ def GetPDFNumWords( path ):
         
     
     return num_words
-    

@@ -1,15 +1,16 @@
 import collections
-from . import HydrusConstants as HC
 import itertools
 import os
+import re
 import threading
 import time
 import traceback
-from . import HydrusData
-from . import HydrusExceptions
-import re
+
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
 from . import HydrusText
+
 
 def CensorshipMatch( tag, censorships ):
     
@@ -295,4 +296,3 @@ def StripTextOfGumpf( t ):
     t = HydrusText.re_leading_space_or_garbage.sub( '', t )
     
     return t
-    

@@ -1,15 +1,13 @@
-from . import ClientDaemons
-from . import ClientImporting
-from . import ClientImportLocal
-from . import ClientPaths
 import collections
-from . import HydrusConstants as HC
 import os
 import shutil
 import stat
 import unittest
-from . import HydrusData
+
 from . import ClientConstants as CC
+from . import ClientDaemons, ClientImporting, ClientImportLocal, ClientPaths
+from . import HydrusConstants as HC
+from . import HydrusData
 from . import HydrusGlobals as HG
 from . import HydrusPaths
 
@@ -76,6 +74,3 @@ class TestDaemons( unittest.TestCase ):
         finally:
             
             shutil.rmtree( test_dir )
-            
-        
-    

@@ -1,23 +1,21 @@
 import base64
-import bs4
 import calendar
 import codecs
-from . import ClientNetworkingDomain
-from . import ClientNetworkingJobs
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusSerialisable
-from . import HydrusTags
-from . import HydrusText
 import json
 import os
 import re
 import threading
 import time
 import urllib.parse
+
+import bs4
+
+from . import ClientNetworkingDomain, ClientNetworkingJobs
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable, HydrusTags, HydrusText
 
 try:
     

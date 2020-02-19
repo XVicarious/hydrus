@@ -220,5 +220,3 @@ with HydrusLogger.HydrusLogger( db_dir, 'server' ) as logger:
         reactor.callFromThread( reactor.stop )
         
         HydrusData.Print( 'hydrus server shut down' )
-        
-    

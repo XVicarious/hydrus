@@ -1,13 +1,16 @@
+import json
+import os
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientGUIFunctions
 from . import HydrusConstants as HC
 from . import HydrusGlobals as HG
 from . import HydrusPaths
-import json
-import os
-from qtpy import QtCore as QC
-from qtpy import QtGui as QG
-from qtpy import QtWidgets as QW
 from . import QtPorting as QP
+
 
 # we do this because some programs like discord will disallow exports with additional custom mimetypes (like 'application/hydrus-files')
 # as this is only ever an internal transfer, and as the python mimedata object is preserved through the dnd, we can just tack this info on with a subclass and python variables

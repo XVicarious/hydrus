@@ -205,5 +205,3 @@ class HydrusRatingArchive( object ):
     def SetRating( self, hash, rating ):
         
         self._c.execute( 'REPLACE INTO ratings ( hash, rating ) VALUES ( ?, ? );', ( sqlite3.Binary( hash ), rating ) )
-        
-    

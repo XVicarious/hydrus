@@ -1,30 +1,4 @@
-from . import HydrusConstants as HC
-from . import ClientConstants as CC
-from . import ClientCaches
-from . import ClientData
-from . import ClientDragDrop
-from . import ClientFiles
-from . import ClientGUICanvas
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsManage
-from . import ClientGUIDialogsQuick
-from . import ClientGUIExport
-from . import ClientGUIFunctions
-from . import ClientGUIMenus
-from . import ClientGUIScrolledPanels
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUIScrolledPanelsManagement
-from . import ClientGUIScrolledPanelsReview
-from . import ClientGUIShortcuts
-from . import ClientGUITags
-from . import ClientGUITopLevelWindows
-from . import ClientMedia
-from . import ClientPaths
-from . import ClientSearch
-from . import ClientTags
-from . import ClientThreading
 import collections
-from . import HydrusExceptions
 import itertools
 import json
 import os
@@ -32,10 +6,24 @@ import random
 import threading
 import time
 import traceback
+
 import yaml
-from . import HydrusData
-from . import HydrusGlobals as HG
 from qtpy import QtWidgets as QW
+
+from . import ClientCaches
+from . import ClientConstants as CC
+from . import (ClientData, ClientDragDrop, ClientFiles, ClientGUICanvas,
+               ClientGUIDialogs, ClientGUIDialogsManage, ClientGUIDialogsQuick,
+               ClientGUIExport, ClientGUIFunctions, ClientGUIMenus,
+               ClientGUIScrolledPanels, ClientGUIScrolledPanelsEdit,
+               ClientGUIScrolledPanelsManagement,
+               ClientGUIScrolledPanelsReview, ClientGUIShortcuts,
+               ClientGUITags, ClientGUITopLevelWindows, ClientMedia,
+               ClientPaths, ClientSearch, ClientTags, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+
 
 def ClearFalsePositives( win, hashes ):
     
@@ -209,5 +197,3 @@ def ResetPotentialSearch( win, hashes ):
     if result == QW.QDialog.Accepted:
         
         HG.client_controller.Write( 'reset_potential_search_status', hashes )
-        
-    

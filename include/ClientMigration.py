@@ -1,10 +1,11 @@
+import os
+
 from . import ClientConstants as CC
 from . import ClientThreading
 from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
 from . import HydrusTagArchive
-import os
 
 pair_types_to_content_types = {}
 
@@ -749,5 +750,3 @@ class MigrationSourceTagServicePairs( MigrationSource ):
     def Prepare( self ):
         
         self._controller.WriteSynchronous( 'migration_start_pairs_job', self._database_temp_job_name, self._tag_service_key, self._content_type, self._content_statuses )
-        
-    

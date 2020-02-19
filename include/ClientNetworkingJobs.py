@@ -1,21 +1,20 @@
 import io
-from . import ClientConstants as CC
-from . import ClientNetworkingContexts
-from . import ClientNetworkingDomain
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusNetworking
-from . import HydrusThreading
-from . import HydrusText
 import os
 import re
-import requests
 import threading
-import traceback
 import time
+import traceback
 import urllib
+
+import requests
+
+from . import ClientConstants as CC
+from . import ClientNetworkingContexts, ClientNetworkingDomain
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusNetworking, HydrusText, HydrusThreading
+
 
 def ConvertStatusCodeAndDataIntoExceptionInfo( status_code, data, is_hydrus_service = False ):
     
@@ -1452,5 +1451,3 @@ class NetworkJobWatcherPage( NetworkJob ):
         network_contexts.append( ClientNetworkingContexts.NetworkContext( CC.NETWORK_CONTEXT_WATCHER_PAGE, self._watcher_key ) )
         
         return network_contexts
-        
-    

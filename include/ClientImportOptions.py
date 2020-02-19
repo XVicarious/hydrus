@@ -1,16 +1,14 @@
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientTags
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusSerialisable
-from . import HydrusTags
-from . import HydrusText
 import os
 import re
+
+from . import ClientConstants as CC
+from . import ClientData, ClientTags
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable, HydrusTags, HydrusText
+
 
 def NewInboxArchiveMatch( new_files, inbox_files, archive_files, status, inbox ):
     

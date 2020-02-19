@@ -1,8 +1,11 @@
-from . import HydrusConstants as HC
-import OpenSSL
 import os
 import stat
 import traceback
+
+import OpenSSL
+
+from . import HydrusConstants as HC
+
 
 def GenerateOpenSSLCertAndKeyFile( cert_path, key_path ):
     

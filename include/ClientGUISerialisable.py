@@ -1,20 +1,18 @@
+import os
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientConstants as CC
-from . import ClientGUICommon
-from . import ClientGUIFunctions
-from . import ClientGUIScrolledPanels
-from . import ClientParsing
-from . import ClientSerialisable
-from . import ClientThreading
+from . import (ClientGUICommon, ClientGUIFunctions, ClientGUIScrolledPanels,
+               ClientParsing, ClientSerialisable, ClientThreading)
 from . import HydrusConstants as HC
 from . import HydrusData
 from . import HydrusGlobals as HG
-from . import HydrusPaths
-from . import HydrusSerialisable
-import os
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
+from . import HydrusPaths, HydrusSerialisable
 from . import QtPorting as QP
+
 
 class PngExportPanel( ClientGUIScrolledPanels.ReviewPanel ):
     
@@ -282,5 +280,3 @@ class PngsExportPanel( ClientGUIScrolledPanels.ReviewPanel ):
         self._export.setText( 'done!' )
         
         HG.client_controller.CallLaterQtSafe(self._export, 2.0, self._export.setText, 'export')
-        
-    

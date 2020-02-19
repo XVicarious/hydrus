@@ -1,49 +1,31 @@
-from . import ClientConstants as CC
-from . import ClientData
-from . import ClientDefaults
-from . import ClientGUICommon
-from . import ClientGUIDialogs
-from . import ClientGUIDialogsQuick
-from . import ClientGUIMenus
-from . import ClientGUIControls
-from . import ClientGUIFunctions
-from . import ClientGUIListBoxes
-from . import ClientGUIListCtrl
-from . import ClientGUIParsing
-from . import ClientGUIScrolledPanels
-from . import ClientGUIScrolledPanelsEdit
-from . import ClientGUISerialisable
-from . import ClientGUITopLevelWindows
-from . import ClientImporting
-from . import ClientNetworking
-from . import ClientNetworkingBandwidth
-from . import ClientNetworkingContexts
-from . import ClientNetworkingDomain
-from . import ClientNetworkingLogin
-from . import ClientNetworkingJobs
-from . import ClientNetworkingSessions
-from . import ClientParsing
-from . import ClientPaths
-from . import ClientSerialisable
-from . import ClientThreading
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusSerialisable
-from . import HydrusTags
-from . import HydrusText
 import itertools
 import os
 import re
 import threading
-import traceback
 import time
-from . import QtPorting as QP
+import traceback
+
 from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
 from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientData, ClientDefaults, ClientGUICommon, ClientGUIControls,
+               ClientGUIDialogs, ClientGUIDialogsQuick, ClientGUIFunctions,
+               ClientGUIListBoxes, ClientGUIListCtrl, ClientGUIMenus,
+               ClientGUIParsing, ClientGUIScrolledPanels,
+               ClientGUIScrolledPanelsEdit, ClientGUISerialisable,
+               ClientGUITopLevelWindows, ClientImporting, ClientNetworking,
+               ClientNetworkingBandwidth, ClientNetworkingContexts,
+               ClientNetworkingDomain, ClientNetworkingJobs,
+               ClientNetworkingLogin, ClientNetworkingSessions, ClientParsing,
+               ClientPaths, ClientSerialisable, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusSerialisable, HydrusTags, HydrusText
 from . import QtPorting as QP
+
 
 class EditLoginCredentialsPanel( ClientGUIScrolledPanels.EditPanel ):
     
@@ -2145,5 +2127,3 @@ class EditLoginStepPanel( ClientGUIScrolledPanels.EditPanel ):
         login_step.SetComplicatedVariables( required_credentials, static_args, temp_args, required_cookies_info, content_parsers )
         
         return login_step
-        
-    

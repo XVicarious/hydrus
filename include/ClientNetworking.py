@@ -1,24 +1,21 @@
-from . import ClientConstants as CC
 import collections
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusNetwork
-from . import HydrusNetworking
-from . import HydrusPaths
-from . import HydrusSerialisable
 import itertools
 import os
 import random
-import requests
-import urllib3
 import threading
 import time
 import traceback
 import urllib.parse
+
+import requests
+import urllib3
 import yaml
 
+from . import ClientConstants as CC
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import HydrusNetwork, HydrusNetworking, HydrusPaths, HydrusSerialisable
 
 JOB_STATUS_AWAITING_VALIDITY = 0
 JOB_STATUS_AWAITING_BANDWIDTH = 1
@@ -495,5 +492,3 @@ class NetworkEngine( object ):
         self._local_shutdown = True
         
         self._new_work_to_do.set()
-        
-    

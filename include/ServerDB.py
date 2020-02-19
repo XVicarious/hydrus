@@ -1,22 +1,18 @@
 import collections
 import hashlib
-from . import HydrusConstants as HC
-from . import HydrusDB
-from . import HydrusEncryption
-from . import HydrusExceptions
-from . import HydrusNetwork
-from . import HydrusPaths
-from . import HydrusSerialisable
 import os
 import random
-from . import ServerFiles
 import sqlite3
 import sys
 import time
 import traceback
-from . import HydrusData
-from . import HydrusTags
+
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusDB, HydrusEncryption, HydrusExceptions
 from . import HydrusGlobals as HG
+from . import (HydrusNetwork, HydrusPaths,
+               HydrusSerialisable, HydrusTags, ServerFiles)
+
 
 def GenerateRepositoryMasterMapTableNames( service_id ):
     
@@ -3422,5 +3418,3 @@ class DB( HydrusDB.HydrusDB ):
     def GetSSLPaths( self ):
         
         return ( self._ssl_cert_path, self._ssl_key_path )
-        
-    

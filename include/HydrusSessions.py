@@ -1,6 +1,4 @@
 import collections
-from . import HydrusConstants as HC
-from . import HydrusExceptions
 import hashlib
 import os
 import queue
@@ -10,7 +8,9 @@ import sys
 import threading
 import time
 import traceback
-from . import HydrusData
+
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
 
 HYDRUS_SESSION_LIFETIME = 30 * 86400
@@ -222,6 +222,3 @@ class HydrusSessionManagerServer( object ):
             for account in accounts:
                 
                 account_keys_to_accounts[ account.GetAccountKey() ] = account
-                
-            
-        

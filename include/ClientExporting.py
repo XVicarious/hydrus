@@ -1,17 +1,13 @@
-from . import ClientConstants as CC
-from . import ClientPaths
-from . import ClientSearch
-from . import ClientTags
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusGlobals as HG
-from . import HydrusPaths
-from . import HydrusSerialisable
-from . import HydrusTags
-from . import HydrusThreading
 import os
 import re
 import stat
+
+from . import ClientConstants as CC
+from . import ClientPaths, ClientSearch, ClientTags
+from . import HydrusConstants as HC
+from . import HydrusData
+from . import HydrusGlobals as HG
+from . import HydrusPaths, HydrusSerialisable, HydrusTags, HydrusThreading
 
 MAX_PATH_LENGTH = 240 # bit of padding from 255 for .txt neigbouring and other surprises
 

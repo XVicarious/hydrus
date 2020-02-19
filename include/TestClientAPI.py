@@ -1,21 +1,6 @@
-from . import ClientCaches
-from . import ClientConstants as CC
-from . import ClientAPI
-from . import ClientLocalServer
-from . import ClientLocalServerResources
-from . import ClientManagers
-from . import ClientMedia
-from . import ClientRatings
-from . import ClientSearch
-from . import ClientServices
-from . import ClientTags
 import collections
 import hashlib
 import http.client
-from . import HydrusConstants as HC
-from . import HydrusExceptions
-from . import HydrusTags
-from . import HydrusText
 import json
 import os
 import random
@@ -23,9 +8,19 @@ import shutil
 import time
 import unittest
 import urllib
+
 from twisted.internet import reactor
-from . import HydrusData
+
+from . import ClientAPI, ClientCaches
+from . import ClientConstants as CC
+from . import (ClientLocalServer, ClientLocalServerResources,
+               ClientManagers, ClientMedia, ClientRatings,
+               ClientSearch, ClientServices, ClientTags)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
+from . import HydrusTags, HydrusText
+
 
 class TestClientAPI( unittest.TestCase ):
     
@@ -2001,5 +1996,3 @@ class TestClientAPI( unittest.TestCase ):
         connection = http.client.HTTPConnection( host, port, timeout = 10 )
         
         self._test_cors_succeeds( connection )
-        
-    

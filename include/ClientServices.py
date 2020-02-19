@@ -1,28 +1,23 @@
-from . import ClientConstants as CC
-from . import ClientDownloading
-from . import ClientFiles
-from . import ClientImporting
-from . import ClientNetworkingContexts
-from . import ClientNetworkingJobs
-from . import ClientRatings
-from . import ClientThreading
 import hashlib
-from . import HydrusConstants as HC
-from . import HydrusData
-from . import HydrusExceptions
-from . import HydrusGlobals as HG
-from . import HydrusNATPunch
-from . import HydrusNetwork
-from . import HydrusNetworking
-from . import HydrusPaths
-from . import HydrusSerialisable
 import json
 import os
 import threading
 import time
 import traceback
+
 from qtpy import QtWidgets as QW
+
+from . import ClientConstants as CC
+from . import (ClientDownloading, ClientFiles, ClientImporting,
+               ClientNetworkingContexts, ClientNetworkingJobs,
+               ClientRatings, ClientThreading)
+from . import HydrusConstants as HC
+from . import HydrusData, HydrusExceptions
+from . import HydrusGlobals as HG
+from . import (HydrusNATPunch, HydrusNetwork, HydrusNetworking,
+               HydrusPaths, HydrusSerialisable)
 from . import QtPorting as QP
+
 
 def GenerateDefaultServiceDictionary( service_type ):
     
@@ -2750,5 +2745,3 @@ class ServiceIPFS( ServiceRemote ):
         content_updates = [ HydrusData.ContentUpdate( HC.CONTENT_TYPE_FILES, HC.CONTENT_UPDATE_DELETE, { hash } ) ]
         
         HG.client_controller.WriteSynchronous( 'content_updates', { self._service_key : content_updates } )
-        
-    

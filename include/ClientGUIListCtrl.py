@@ -1,19 +1,17 @@
+import os
+
+from qtpy import QtCore as QC
+from qtpy import QtGui as QG
+from qtpy import QtWidgets as QW
+
 from . import ClientConstants as CC
-from . import ClientData
-from . import ClientDragDrop
-from . import ClientGUICommon
-from . import ClientGUIFunctions
-from . import ClientSerialisable
-from . import ClientGUIShortcuts
-from . import HydrusData
-from . import HydrusExceptions
+from . import (ClientData, ClientDragDrop, ClientGUICommon,
+               ClientGUIFunctions, ClientGUIShortcuts,
+               ClientSerialisable, HydrusData, HydrusExceptions)
 from . import HydrusGlobals as HG
 from . import HydrusSerialisable
-import os
-from qtpy import QtCore as QC
-from qtpy import QtWidgets as QW
-from qtpy import QtGui as QG
 from . import QtPorting as QP
+
 
 def SafeNoneInt( value ):
     
@@ -1076,4 +1074,3 @@ class BetterListCtrlPanel( QW.QWidget ):
     def UpdateButtons( self ):
         
         self._UpdateButtons()
-        

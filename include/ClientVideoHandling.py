@@ -1,8 +1,7 @@
-import numpy.core.multiarray # important this comes before cv!
 import cv2
-from . import ClientImageHandling
-from . import HydrusData
-from . import HydrusExceptions
+import numpy.core.multiarray  # important this comes before cv!
+
+from . import ClientImageHandling, HydrusData, HydrusExceptions
 from . import HydrusGlobals as HG
 from . import HydrusImageHandling
 
@@ -255,5 +254,3 @@ class GIFRenderer( object ):
     def Stop( self ):
         
         pass
-        
-    
