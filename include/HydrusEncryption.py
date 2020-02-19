@@ -7,43 +7,44 @@ import OpenSSL
 from . import HydrusConstants as HC
 
 
-def GenerateOpenSSLCertAndKeyFile( cert_path, key_path ):
-    
+def GenerateOpenSSLCertAndKeyFile(cert_path, key_path):
+
     key = OpenSSL.crypto.PKey()
-    
-    key.generate_key( OpenSSL.crypto.TYPE_RSA, 2048 )
-    
+
+    key.generate_key(OpenSSL.crypto.TYPE_RSA, 2048)
+
     # create a self-signed cert
     cert = OpenSSL.crypto.X509()
-    
+
     cert.get_subject().countryName = 'HN'
     cert.get_subject().organizationName = 'hydrus network'
-    cert.get_subject().organizationalUnitName = os.urandom( 32 ).hex()
-    cert.set_serial_number( 1 )
-    cert.gmtime_adj_notBefore( 0 )
-    cert.gmtime_adj_notAfter( 10*365*24*60*60 )
-    cert.set_issuer( cert.get_subject() )
-    cert.set_pubkey( key )
-    cert.sign( key, 'sha256' )
-    
-    cert_bytes = OpenSSL.crypto.dump_certificate( OpenSSL.crypto.FILETYPE_PEM, cert )
-    
-    with open( cert_path, 'wb' ) as f:
-        
-        f.write( cert_bytes )
-        
-    
-    os.chmod( cert_path, stat.S_IREAD )
-    
-    key_bytes = OpenSSL.crypto.dump_privatekey( OpenSSL.crypto.FILETYPE_PEM, key )
-    
-    with open( key_path, 'wb' ) as f:
-        
-        f.write( key_bytes )
-        
-    
-    os.chmod( key_path, stat.S_IREAD )
-    
+    cert.get_subject().organizationalUnitName = os.urandom(32).hex()
+    cert.set_serial_number(1)
+    cert.gmtime_adj_notBefore(0)
+    cert.gmtime_adj_notAfter(10 * 365 * 24 * 60 * 60)
+    cert.set_issuer(cert.get_subject())
+    cert.set_pubkey(key)
+    cert.sign(key, 'sha256')
+
+    cert_bytes = OpenSSL.crypto.dump_certificate(OpenSSL.crypto.FILETYPE_PEM,
+                                                 cert)
+
+    with open(cert_path, 'wb') as f:
+
+        f.write(cert_bytes)
+
+    os.chmod(cert_path, stat.S_IREAD)
+
+    key_bytes = OpenSSL.crypto.dump_privatekey(OpenSSL.crypto.FILETYPE_PEM,
+                                               key)
+
+    with open(key_path, 'wb') as f:
+
+        f.write(key_bytes)
+
+    os.chmod(key_path, stat.S_IREAD)
+
+
 '''
 # old crypto code experiments
 

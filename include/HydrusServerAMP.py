@@ -12,7 +12,6 @@ from . import (HydrusData, HydrusDocumentHandling, HydrusExceptions,
                HydrusFileHandling, HydrusFlashHandling)
 from . import HydrusGlobals as HG
 from . import HydrusImageHandling, HydrusServerResources, ServerFiles
-
 '''
 class HydrusAMPCommand( amp.Command ):
     errors = {}

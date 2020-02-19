@@ -2,17 +2,18 @@ import struct
 import zlib
 
 try:
-    
+
     import pylzma
-    
+
     PYLZMA_OK = True
-    
+
 except:
-    
+
     PYLZMA_OK = False
-    
+
 # hydrus_dev added ZWS support
 # hydrus_dev mangled this to work on py3
+
 
 def parse(input):
     """Parses the header information from an SWF file."""
@@ -34,16 +35,16 @@ def parse(input):
 
     # Read the 3-byte signature field
     signature = b''.join(struct.unpack('<3c', input.read(3)))
-    
-    signature = str( signature, 'utf-8' )
-    
-    if signature not in ( 'FWS', 'CWS', 'ZWS' ):
-        
-        raise ValueError( 'Invalid SWF signature: {}'.format( signature ) )
-        
+
+    signature = str(signature, 'utf-8')
+
+    if signature not in ('FWS', 'CWS', 'ZWS'):
+
+        raise ValueError('Invalid SWF signature: {}'.format(signature))
 
     # Compression
-    header['compressed'] = signature.startswith( 'C' ) or signature.startswith( 'Z' )
+    header['compressed'] = signature.startswith('C') or signature.startswith(
+        'Z')
 
     # Version
     header['version'] = read_ui8(input.read(1))
@@ -52,25 +53,23 @@ def parse(input):
     header['size'] = read_ui32(input.read(4))
 
     # Payload
-    if signature.startswith( 'F' ):
-        
+    if signature.startswith('F'):
+
         buffer = input.read(header['size'])
-        
-    elif signature.startswith( 'C' ):
+
+    elif signature.startswith('C'):
         buffer = input.read(header['size'])
         # Unpack the zlib compression
         buffer = zlib.decompress(buffer)
-    elif signature.startswith( 'Z' ):
-        
-        uncompressed_size = input.read( 4 )
-        
+    elif signature.startswith('Z'):
+
+        uncompressed_size = input.read(4)
+
         if not PYLZMA_OK:
-            
-            raise Exception( 'Cannot parse ZWS swf files without pylzma!' )
-            
-        
-        buffer = pylzma.decompress( input.read() )
-        
+
+            raise Exception('Cannot parse ZWS swf files without pylzma!')
+
+        buffer = pylzma.decompress(input.read())
 
     # Containing rectangle (struct RECT)
 

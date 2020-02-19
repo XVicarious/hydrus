@@ -6,23 +6,24 @@ import traceback
 from . import HydrusConstants as HC
 
 
-def GetNumWordsFromString( s ):
-    
-    s = re.sub( r'[\s]+', ' ', s ) # turns multiple spaces into single spaces
-    
-    num_words = len( s.split( ' ' ) )
-    
+def GetNumWordsFromString(s):
+
+    s = re.sub(r'[\s]+', ' ', s)  # turns multiple spaces into single spaces
+
+    num_words = len(s.split(' '))
+
     return num_words
-    
-def GetPDFNumWords( path ):
-    
+
+
+def GetPDFNumWords(path):
+
     # I discovered a pdf that pulled this into an infinite loop due to malformed header.
     # This gives bunk data anyway, so let's just cut it out until we have a better solution here all around
-    
+
     return None
-    
+
     try:
-        
+
         pass
         '''
         with open( path, 'rb' ) as f:
@@ -38,8 +39,7 @@ def GetPDFNumWords( path ):
             
         '''
     except:
-        
+
         num_words = 0
-        
-    
+
     return num_words
